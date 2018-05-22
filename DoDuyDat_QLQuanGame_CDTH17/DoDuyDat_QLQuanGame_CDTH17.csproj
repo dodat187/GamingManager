@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{76199767-DEE9-41DA-A6B0-B14E7999442B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DoDuyDat_QLQuanGame_CDTH17</RootNamespace>
+    <AssemblyName>DoDuyDat_QLQuanGame_CDTH17</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DoDuyDat_QLQuanGame_17DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DoDuyDat_QLQuanGame_17DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ChiTietHoaDon.cs">
+      <DependentUpon>QLQuanGameModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\DichVu.cs">
+      <DependentUpon>QLQuanGameModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\HoaDon.cs">
+      <DependentUpon>QLQuanGameModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\NguoiDung.cs">
+      <DependentUpon>QLQuanGameModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\QLQuanGameModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLQuanGameModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\QLQuanGameModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLQuanGameModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\QLQuanGameModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLQuanGameModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sysdiagram.cs">
+      <DependentUpon>QLQuanGameModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ThietBi.cs">
+      <DependentUpon>QLQuanGameModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddMoney.Designer.cs">
+      <DependentUpon>AddMoney.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BillManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BillManager.Designer.cs">
+      <DependentUpon>BillManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreatBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreatBill.Designer.cs">
+      <DependentUpon>CreatBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Infomation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Infomation.Designer.cs">
+      <DependentUpon>Infomation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuManager.Designer.cs">
+      <DependentUpon>MenuManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Libraries\IdAccount.cs" />
+    <Compile Include="Libraries\IdGenerate.cs" />
+    <Compile Include="Libraries\IdValidation.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuService.Designer.cs">
+      <DependentUpon>MenuService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PCManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PCManager.Designer.cs">
+      <DependentUpon>PCManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\UserManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserManager.Designer.cs">
+      <DependentUpon>UserManager.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\AddMoney.resx">
+      <DependentUpon>AddMoney.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BillManager.resx">
+      <DependentUpon>BillManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreatBill.resx">
+      <DependentUpon>CreatBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Infomation.resx">
+      <DependentUpon>Infomation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuManager.resx">
+      <DependentUpon>MenuManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuService.resx">
+      <DependentUpon>MenuService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PCManager.resx">
+      <DependentUpon>PCManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Forms\UserManager.resx">
+      <DependentUpon>UserManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DoDuyDat_QLQuanGame_17DataSet.xsc">
+      <DependentUpon>DoDuyDat_QLQuanGame_17DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DoDuyDat_QLQuanGame_17DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DoDuyDat_QLQuanGame_17DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DoDuyDat_QLQuanGame_17DataSet.xss">
+      <DependentUpon>DoDuyDat_QLQuanGame_17DataSet.xsd</DependentUpon>
+    </None>
+    <EntityDeploy Include="Entities\QLQuanGameModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLQuanGameModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Entities\QLQuanGameModel.edmx.diagram">
+      <DependentUpon>QLQuanGameModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\28056094_932464620242396_6157053624348885120_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\28822594_1869285000030337_1040742205_o.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entities\QLQuanGameModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLQuanGameModel.edmx</DependentUpon>
+      <LastGenOutput>QLQuanGameModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entities\QLQuanGameModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLQuanGameModel.edmx</DependentUpon>
+      <LastGenOutput>QLQuanGameModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
