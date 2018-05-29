@@ -12,6 +12,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="ChiTietSuDungs">
+      <EntityTypeMapping TypeName="DoDuyDat_QLQuanGame_17Model.ChiTietSuDung">
+        <MappingFragment StoreEntitySet="ChiTietSuDung">
+          <ScalarProperty Name="MaCTSD" ColumnName="MaCTSD" />
+          <ScalarProperty Name="ID_PC" ColumnName="ID_PC" />
+          <ScalarProperty Name="ID_User" ColumnName="ID_User" />
+          <ScalarProperty Name="Stime" ColumnName="Stime" />
+          <ScalarProperty Name="Etime" ColumnName="Etime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="DichVus">
       <EntityTypeMapping TypeName="DoDuyDat_QLQuanGame_17Model.DichVu">
         <MappingFragment StoreEntitySet="DichVu">
@@ -53,9 +64,15 @@
       <EntityTypeMapping TypeName="DoDuyDat_QLQuanGame_17Model.ThietBi">
         <MappingFragment StoreEntitySet="ThietBi">
           <ScalarProperty Name="ID_PC" ColumnName="ID_PC" />
+          <ScalarProperty Name="TenPC" ColumnName="TenPC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuanTris">
+      <EntityTypeMapping TypeName="DoDuyDat_QLQuanGame_17Model.QuanTri">
+        <MappingFragment StoreEntitySet="QuanTri">
+          <ScalarProperty Name="PhanQuyen" ColumnName="PhanQuyen" />
           <ScalarProperty Name="ID_User" ColumnName="ID_User" />
-          <ScalarProperty Name="Stime" ColumnName="Stime" />
-          <ScalarProperty Name="Etime" ColumnName="Etime" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

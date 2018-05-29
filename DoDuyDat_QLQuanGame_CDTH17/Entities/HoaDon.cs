@@ -21,7 +21,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Entities
         }
     
         public string MaHD { get; set; }
-        public Nullable<int> TongTien { get; set; }
+        public Nullable<double> TongTien { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }

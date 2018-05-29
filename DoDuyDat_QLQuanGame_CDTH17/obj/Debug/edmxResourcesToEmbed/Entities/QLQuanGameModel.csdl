@@ -5,19 +5,31 @@
       <PropertyRef Name="MaHD" />
       <PropertyRef Name="MaCTHD" />
     </Key>
-    <Property Name="MaHD" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="MaCTHD" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="MaDV" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="MaHD" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaCTHD" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaDV" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="SoluongDV" Type="Int32" />
-    <Property Name="ThanhTien" Type="Int32" />
+    <Property Name="ThanhTien" Type="Double" />
     <NavigationProperty Name="DichVu" Relationship="Self.FK_ChiTietHoaDon_DichVu" FromRole="ChiTietHoaDon" ToRole="DichVu" />
     <NavigationProperty Name="HoaDon" Relationship="Self.FK_ChiTietHoaDon_HoaDon" FromRole="ChiTietHoaDon" ToRole="HoaDon" />
+  </EntityType>
+  <EntityType Name="ChiTietSuDung">
+    <Key>
+      <PropertyRef Name="MaCTSD" />
+    </Key>
+    <Property Name="MaCTSD" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ID_PC" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ID_User" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Stime" Type="DateTime" Precision="3" />
+    <Property Name="Etime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="NguoiDung" Relationship="Self.FK_ChiTietSuDung_NguoiDung" FromRole="ChiTietSuDung" ToRole="NguoiDung" />
+    <NavigationProperty Name="ThietBi" Relationship="Self.FK_ChiTietSuDung_ThietBi" FromRole="ChiTietSuDung" ToRole="ThietBi" />
   </EntityType>
   <EntityType Name="DichVu">
     <Key>
       <PropertyRef Name="MaDV" />
     </Key>
-    <Property Name="MaDV" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="MaDV" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="TenDV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="DonGia" Type="Int32" />
     <NavigationProperty Name="ChiTietHoaDons" Relationship="Self.FK_ChiTietHoaDon_DichVu" FromRole="DichVu" ToRole="ChiTietHoaDon" />
@@ -26,8 +38,8 @@
     <Key>
       <PropertyRef Name="MaHD" />
     </Key>
-    <Property Name="MaHD" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="TongTien" Type="Int32" />
+    <Property Name="MaHD" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TongTien" Type="Double" />
     <NavigationProperty Name="ChiTietHoaDons" Relationship="Self.FK_ChiTietHoaDon_HoaDon" FromRole="HoaDon" ToRole="ChiTietHoaDon" />
   </EntityType>
   <EntityType Name="NguoiDung">
@@ -37,7 +49,8 @@
     <Property Name="ID_User" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="ID_Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="ID_Money" Type="Int32" />
-    <NavigationProperty Name="ThietBis" Relationship="Self.FK_ThietBi_NguoiDung" FromRole="NguoiDung" ToRole="ThietBi" />
+    <NavigationProperty Name="ChiTietSuDungs" Relationship="Self.FK_ChiTietSuDung_NguoiDung" FromRole="NguoiDung" ToRole="ChiTietSuDung" />
+    <NavigationProperty Name="QuanTri" Relationship="DoDuyDat_QLQuanGame_17Model.FK_QuanTri_NguoiDung" FromRole="NguoiDung" ToRole="QuanTri" />
   </EntityType>
   <EntityType Name="sysdiagram">
     <Key>
@@ -53,11 +66,9 @@
     <Key>
       <PropertyRef Name="ID_PC" />
     </Key>
-    <Property Name="ID_PC" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="ID_User" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="Stime" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-    <Property Name="Etime" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-    <NavigationProperty Name="NguoiDung" Relationship="Self.FK_ThietBi_NguoiDung" FromRole="ThietBi" ToRole="NguoiDung" />
+    <Property Name="ID_PC" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenPC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ChiTietSuDungs" Relationship="Self.FK_ChiTietSuDung_ThietBi" FromRole="ThietBi" ToRole="ChiTietSuDung" />
   </EntityType>
   <Association Name="FK_ChiTietHoaDon_DichVu">
     <End Role="DichVu" Type="Self.DichVu" Multiplicity="0..1" />
@@ -83,20 +94,33 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_ThietBi_NguoiDung">
+  <Association Name="FK_ChiTietSuDung_NguoiDung">
     <End Role="NguoiDung" Type="Self.NguoiDung" Multiplicity="0..1" />
-    <End Role="ThietBi" Type="Self.ThietBi" Multiplicity="*" />
+    <End Role="ChiTietSuDung" Type="Self.ChiTietSuDung" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NguoiDung">
         <PropertyRef Name="ID_User" />
       </Principal>
-      <Dependent Role="ThietBi">
+      <Dependent Role="ChiTietSuDung">
         <PropertyRef Name="ID_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChiTietSuDung_ThietBi">
+    <End Role="ThietBi" Type="Self.ThietBi" Multiplicity="0..1" />
+    <End Role="ChiTietSuDung" Type="Self.ChiTietSuDung" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThietBi">
+        <PropertyRef Name="ID_PC" />
+      </Principal>
+      <Dependent Role="ChiTietSuDung">
+        <PropertyRef Name="ID_PC" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="DoDuyDat_QLQuanGame_17Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="ChiTietHoaDons" EntityType="Self.ChiTietHoaDon" />
+    <EntitySet Name="ChiTietSuDungs" EntityType="Self.ChiTietSuDung" />
     <EntitySet Name="DichVus" EntityType="Self.DichVu" />
     <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
     <EntitySet Name="NguoiDungs" EntityType="Self.NguoiDung" />
@@ -110,9 +134,38 @@
       <End Role="HoaDon" EntitySet="HoaDons" />
       <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDons" />
     </AssociationSet>
-    <AssociationSet Name="FK_ThietBi_NguoiDung" Association="Self.FK_ThietBi_NguoiDung">
+    <AssociationSet Name="FK_ChiTietSuDung_NguoiDung" Association="Self.FK_ChiTietSuDung_NguoiDung">
       <End Role="NguoiDung" EntitySet="NguoiDungs" />
+      <End Role="ChiTietSuDung" EntitySet="ChiTietSuDungs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChiTietSuDung_ThietBi" Association="Self.FK_ChiTietSuDung_ThietBi">
       <End Role="ThietBi" EntitySet="ThietBis" />
+      <End Role="ChiTietSuDung" EntitySet="ChiTietSuDungs" />
+    </AssociationSet>
+    <EntitySet Name="QuanTris" EntityType="DoDuyDat_QLQuanGame_17Model.QuanTri" />
+    <AssociationSet Name="FK_QuanTri_NguoiDung" Association="DoDuyDat_QLQuanGame_17Model.FK_QuanTri_NguoiDung">
+      <End Role="NguoiDung" EntitySet="NguoiDungs" />
+      <End Role="QuanTri" EntitySet="QuanTris" />
     </AssociationSet>
   </EntityContainer>
+  <EntityType Name="QuanTri">
+    <Key>
+      <PropertyRef Name="ID_User" />
+    </Key>
+    <Property Name="ID_User" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PhanQuyen" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NguoiDung" Relationship="DoDuyDat_QLQuanGame_17Model.FK_QuanTri_NguoiDung" FromRole="QuanTri" ToRole="NguoiDung" />
+  </EntityType>
+  <Association Name="FK_QuanTri_NguoiDung">
+    <End Type="DoDuyDat_QLQuanGame_17Model.NguoiDung" Role="NguoiDung" Multiplicity="1" />
+    <End Type="DoDuyDat_QLQuanGame_17Model.QuanTri" Role="QuanTri" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="NguoiDung">
+        <PropertyRef Name="ID_User" />
+      </Principal>
+      <Dependent Role="QuanTri">
+        <PropertyRef Name="ID_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

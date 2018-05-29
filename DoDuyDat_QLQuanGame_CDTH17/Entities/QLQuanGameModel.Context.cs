@@ -26,10 +26,12 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Entities
         }
     
         public virtual DbSet<ChiTietHoaDon> ChiTietHoaDons { get; set; }
+        public virtual DbSet<ChiTietSuDung> ChiTietSuDungs { get; set; }
         public virtual DbSet<DichVu> DichVus { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<NguoiDung> NguoiDungs { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<ThietBi> ThietBis { get; set; }
+        public virtual DbSet<QuanTri> QuanTris { get; set; }
     }
 }

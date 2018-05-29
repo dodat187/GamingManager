@@ -83,15 +83,15 @@ namespace DoDuyDat_QLQuanGame_CDTH17
 
         private void tsmPCManager_Click(object sender, EventArgs e)
         {
-            if (!CheckExistForm("PCManager"))
+            if (!CheckExistForm("PCService"))
             {
-                PCManager frmPC = new PCManager();
+                PCService frmPC = new PCService();
                 frmPC.MdiParent = this;
                 frmPC.Show();
             }
             else
             {
-                ActiveChildForm("PCManager");
+                ActiveChildForm("PCService");
             }
         }
 
@@ -153,7 +153,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
 
         private void tsmLogout_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             Login frmLogin = new Login();
             frmLogin.Show();
         }
@@ -178,6 +178,20 @@ namespace DoDuyDat_QLQuanGame_CDTH17
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void tsmPhanQuyen_Click(object sender, EventArgs e)
+        {
+            if (!CheckExistForm("PhanQuyen"))
+            {
+                PhanQuyen frmPhanQuyen = new PhanQuyen();
+                frmPhanQuyen.MdiParent = this;
+                frmPhanQuyen.Show();
+            }
+            else
+            {
+                ActiveChildForm("PhanQuyen");
+            }
         }
     }
 }

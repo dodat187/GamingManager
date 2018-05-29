@@ -57,20 +57,24 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
 
         void unlockControl()
         {
-            txtMaSP.Enabled = false;
-            txtTenSP.Enabled = true;
-            txtDonGia.Enabled = true;
-            btnThem.Hide();
-            btnLuu.Show();
+            btnThem.Enabled = true;
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
             btnReset.Enabled = true;
             btnThoat.Enabled = true;
         }
-
+        void resetText()
+        {
+            txtTenSP.Text = "";
+            txtDonGia.Text = "";
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            unlockControl();
+            unlockText();
+            resetText();
+            loadID();
+            btnThem.Hide();
+            btnLuu.Show();
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
         }
@@ -85,6 +89,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
                 dv.DonGia = int.Parse(txtDonGia.Text);
                 db.DichVus.Add(dv);
                 db.SaveChanges();
+                reset();
             }
             if (flagAction == "update")
             {
@@ -99,11 +104,12 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
                         db.SaveChanges();
                         currentDV = null;
                     }
-                    flagAction = "add";
+                    reset();
                     lockControl();
                     btnLuu.Enabled = false;
                     btnReset.Enabled = true;
                 }
+                flagAction = "add";
             }
             btnThem.Show();
             reset();
@@ -146,22 +152,45 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
         private void btnSua_Click(object sender, EventArgs e)
         {
             bindToTextbox();
+            unlockText();
             if (currentDV != null)
             {
-                btnReset.Enabled = false;
-                btnXoa.Enabled = false;
+                btnReset.Enabled = true;
+                btnXoa.Enabled = true;
                 btnSua.Enabled = false;
                 flagAction = "update";
             }
-            unlockControl();
+            btnLuu.Show();
+            btnThem.Hide();
         }
+
+
+        void unlockText()
+        {
+            txtMaSP.Enabled = false;
+            txtTenSP.Enabled = true;
+            txtDonGia.Enabled = true;
+        }
+
+        void lockText()
+        {
+            txtMaSP.Enabled = false;
+            txtTenSP.Enabled = false;
+            txtDonGia.Enabled = false;
+        }
+
 
         private void dgvDichVu_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             currentDV = (dgvDichVu.DataSource as List<DichVu>).Skip(e.RowIndex).FirstOrDefault();
             bindToTextbox();
-            unlockControl();
-            
+            flagAction = "update";
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+            btnLuu.Show();
+            btnLuu.Enabled = true;
+            unlockText();
+            btnThem.Hide();
         }
 
         void bindToTextbox()
@@ -174,8 +203,12 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
         private void dgvDichVu_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             currentDV = (dgvDichVu.DataSource as List<DichVu>).Skip(e.RowIndex).FirstOrDefault();
+            bindToTextbox();
+            lockText();
+            lockControl();
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
+            
         }
     }
 }

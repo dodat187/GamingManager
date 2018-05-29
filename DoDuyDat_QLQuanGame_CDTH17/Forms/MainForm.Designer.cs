@@ -45,6 +45,7 @@
             this.tsmExit = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.Label();
+            this.tsmPhanQuyen = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -152,6 +153,7 @@
             // tsmFunction
             // 
             this.tsmFunction.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmPhanQuyen,
             this.tsmLogout,
             this.tsmExit});
             this.tsmFunction.Font = new System.Drawing.Font("Tahoma", 9F);
@@ -188,6 +190,13 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(0, 13);
             this.txtID.TabIndex = 3;
+            // 
+            // tsmPhanQuyen
+            // 
+            this.tsmPhanQuyen.Name = "tsmPhanQuyen";
+            this.tsmPhanQuyen.Size = new System.Drawing.Size(152, 22);
+            this.tsmPhanQuyen.Text = "Phân Quyền";
+            this.tsmPhanQuyen.Click += new System.EventHandler(this.tsmPhanQuyen_Click);
             // 
             // MainForm
             // 
@@ -230,5 +239,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmAddMoney;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label txtID;
+        private System.Windows.Forms.ToolStripMenuItem tsmPhanQuyen;
     }
 }

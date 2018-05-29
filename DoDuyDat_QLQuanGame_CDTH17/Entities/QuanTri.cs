@@ -12,15 +12,11 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class ChiTietHoaDon
+    public partial class QuanTri
     {
-        public string MaHD { get; set; }
-        public string MaCTHD { get; set; }
-        public string MaDV { get; set; }
-        public Nullable<int> SoluongDV { get; set; }
-        public Nullable<double> ThanhTien { get; set; }
+        public string ID_User { get; set; }
+        public string PhanQuyen { get; set; }
     
-        public virtual DichVu DichVu { get; set; }
-        public virtual HoaDon HoaDon { get; set; }
+        public virtual NguoiDung NguoiDung { get; set; }
     }
 }

@@ -28,7 +28,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
         void reset()
         {
@@ -40,11 +40,15 @@ namespace DoDuyDat_QLQuanGame_CDTH17
         {
             string _iduser = txtUser.Text;
             string _idpass = txtPassword.Text;
+            string _idroles = "Admin";
 
             var user = db.NguoiDungs.Find(_iduser);
-            if (user != null)
+            var userroles = db.QuanTris.Find(_iduser);
+            var roles = db.QuanTris.Find(_idroles);
+
+            if (user != null && userroles != null)
             {
-                if (user.ID_Password == _idpass)
+                if (user.ID_Password == _idpass && roles.PhanQuyen == "Admin")
                 {
                     MainForm frmMain = new MainForm();
 
@@ -59,23 +63,14 @@ namespace DoDuyDat_QLQuanGame_CDTH17
                 else
                 {
                     MessageBox.Show("Sai mật khẩu ! Vui lòng thử lại");
+                    reset();
                 }
             }
             else
             {
-                MessageBox.Show("Tài khoản không tồn tại ! Vui lòng thử lại");
+                MessageBox.Show("Tài khoản này không được phép truy cập Quản Trị !!! \n Vui lòng thử lại hoặc liên hệ Quản Lý Cửa Hàng !!!");
+                reset();
             }
-            //if (txtUser.Text == "admin" && txtPassword.Text == "admin")
-            //{
-            //    IdAccount.Login = true;
-            //    MessageBox.Show("Đăng Nhập Thành Công !");
-            //    frmMain.Show();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Lỗi vui lòng thử lại !");
-            //    this.Show();
-            //}
         }
     }
 }

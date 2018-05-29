@@ -30,26 +30,26 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTongtien = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.doDuyDat_QLQuanGame_17DataSet = new DoDuyDat_QLQuanGame_CDTH17.DoDuyDat_QLQuanGame_17DataSet();
-            this.chiTietHoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.chiTietHoaDonTableAdapter = new DoDuyDat_QLQuanGame_CDTH17.DoDuyDat_QLQuanGame_17DataSetTableAdapters.ChiTietHoaDonTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chiTietHoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.doDuyDat_QLQuanGame_17DataSet = new DoDuyDat_QLQuanGame_CDTH17.DoDuyDat_QLQuanGame_17DataSet();
+            this.chiTietHoaDonTableAdapter = new DoDuyDat_QLQuanGame_CDTH17.DoDuyDat_QLQuanGame_17DataSetTableAdapters.ChiTietHoaDonTableAdapter();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doDuyDat_QLQuanGame_17DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chiTietHoaDonBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doDuyDat_QLQuanGame_17DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -61,20 +61,6 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hóa Đơn";
-            // 
-            // crystalReportViewer1
-            // 
-            this.crystalReportViewer1.ActiveViewIndex = -1;
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.DisplayStatusBar = false;
-            this.crystalReportViewer1.DisplayToolbar = false;
-            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(3, 16);
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(763, 258);
-            this.crystalReportViewer1.TabIndex = 0;
-            this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // comboBox1
             // 
@@ -103,6 +89,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "In Hóa Đơn";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -134,12 +121,12 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Tổng Tiền :";
             // 
-            // textBox1
+            // txtTongtien
             // 
-            this.textBox1.Location = new System.Drawing.Point(96, 164);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(129, 20);
-            this.textBox1.TabIndex = 8;
+            this.txtTongtien.Location = new System.Drawing.Point(96, 164);
+            this.txtTongtien.Name = "txtTongtien";
+            this.txtTongtien.Size = new System.Drawing.Size(129, 20);
+            this.txtTongtien.TabIndex = 8;
             // 
             // dataGridView1
             // 
@@ -155,20 +142,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(534, 206);
             this.dataGridView1.TabIndex = 9;
-            // 
-            // doDuyDat_QLQuanGame_17DataSet
-            // 
-            this.doDuyDat_QLQuanGame_17DataSet.DataSetName = "DoDuyDat_QLQuanGame_17DataSet";
-            this.doDuyDat_QLQuanGame_17DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // chiTietHoaDonBindingSource
-            // 
-            this.chiTietHoaDonBindingSource.DataMember = "ChiTietHoaDon";
-            this.chiTietHoaDonBindingSource.DataSource = this.doDuyDat_QLQuanGame_17DataSet;
-            // 
-            // chiTietHoaDonTableAdapter
-            // 
-            this.chiTietHoaDonTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -198,13 +171,37 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.Width = 125;
             // 
+            // chiTietHoaDonBindingSource
+            // 
+            this.chiTietHoaDonBindingSource.DataMember = "ChiTietHoaDon";
+            this.chiTietHoaDonBindingSource.DataSource = this.doDuyDat_QLQuanGame_17DataSet;
+            // 
+            // doDuyDat_QLQuanGame_17DataSet
+            // 
+            this.doDuyDat_QLQuanGame_17DataSet.DataSetName = "DoDuyDat_QLQuanGame_17DataSet";
+            this.doDuyDat_QLQuanGame_17DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // chiTietHoaDonTableAdapter
+            // 
+            this.chiTietHoaDonTableAdapter.ClearBeforeFill = true;
+            // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 19);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.Size = new System.Drawing.Size(766, 252);
+            this.crystalReportViewer1.TabIndex = 10;
+            // 
             // BillManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(771, 494);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTongtien);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -219,8 +216,8 @@
             this.Load += new System.EventHandler(this.BillManager_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doDuyDat_QLQuanGame_17DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chiTietHoaDonBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doDuyDat_QLQuanGame_17DataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,14 +225,13 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTongtien;
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private DoDuyDat_QLQuanGame_17DataSet doDuyDat_QLQuanGame_17DataSet;
@@ -245,5 +241,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
     }
 }

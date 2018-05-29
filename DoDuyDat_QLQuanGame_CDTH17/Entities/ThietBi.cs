@@ -14,11 +14,16 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Entities
     
     public partial class ThietBi
     {
-        public string ID_PC { get; set; }
-        public string ID_User { get; set; }
-        public string Stime { get; set; }
-        public string Etime { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public ThietBi()
+        {
+            this.ChiTietSuDungs = new HashSet<ChiTietSuDung>();
+        }
     
-        public virtual NguoiDung NguoiDung { get; set; }
+        public string ID_PC { get; set; }
+        public string TenPC { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietSuDung> ChiTietSuDungs { get; set; }
     }
 }

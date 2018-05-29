@@ -17,7 +17,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NguoiDung()
         {
-            this.ThietBis = new HashSet<ThietBi>();
+            this.ChiTietSuDungs = new HashSet<ChiTietSuDung>();
         }
     
         public string ID_User { get; set; }
@@ -25,6 +25,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Entities
         public Nullable<int> ID_Money { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ThietBi> ThietBis { get; set; }
+        public virtual ICollection<ChiTietSuDung> ChiTietSuDungs { get; set; }
+        public virtual QuanTri QuanTri { get; set; }
     }
 }

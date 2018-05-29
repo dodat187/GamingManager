@@ -64,12 +64,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DoDuyDat_QLQuanGame_17DataSet.cs">
+      <DependentUpon>DoDuyDat_QLQuanGame_17DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DoDuyDat_QLQuanGame_17DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DoDuyDat_QLQuanGame_17DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Entities\ChiTietHoaDon.cs">
+      <DependentUpon>QLQuanGameModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ChiTietSuDung.cs">
       <DependentUpon>QLQuanGameModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\DichVu.cs">
@@ -95,6 +101,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLQuanGameModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\QuanTri.cs">
+      <DependentUpon>QLQuanGameModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Entities\sysdiagram.cs">
       <DependentUpon>QLQuanGameModel.tt</DependentUpon>
@@ -144,6 +153,18 @@
     <Compile Include="Forms\MenuManager.Designer.cs">
       <DependentUpon>MenuManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PCService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PCService.Designer.cs">
+      <DependentUpon>PCService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ThemTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ThemTien.Designer.cs">
+      <DependentUpon>ThemTien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Libraries\IdAccount.cs" />
     <Compile Include="Libraries\IdGenerate.cs" />
     <Compile Include="Libraries\IdValidation.cs" />
@@ -165,11 +186,11 @@
     <Compile Include="Forms\MenuService.Designer.cs">
       <DependentUpon>MenuService.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\PCManager.cs">
+    <Compile Include="Forms\PhanQuyen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\PCManager.Designer.cs">
-      <DependentUpon>PCManager.cs</DependentUpon>
+    <Compile Include="Forms\PhanQuyen.Designer.cs">
+      <DependentUpon>PhanQuyen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -200,6 +221,12 @@
     <EmbeddedResource Include="Forms\MenuManager.resx">
       <DependentUpon>MenuManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PCService.resx">
+      <DependentUpon>PCService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ThemTien.resx">
+      <DependentUpon>ThemTien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -209,8 +236,8 @@
     <EmbeddedResource Include="Forms\MenuService.resx">
       <DependentUpon>MenuService.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PCManager.resx">
-      <DependentUpon>PCManager.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\PhanQuyen.resx">
+      <DependentUpon>PhanQuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

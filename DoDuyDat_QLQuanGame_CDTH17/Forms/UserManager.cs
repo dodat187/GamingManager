@@ -1,4 +1,5 @@
 ﻿using DoDuyDat_QLQuanGame_CDTH17.Entities;
+using DoDuyDat_QLQuanGame_CDTH17.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,8 +31,8 @@ namespace DoDuyDat_QLQuanGame_CDTH17
         void lockControl()
         {
             txtTaikhoan.Enabled = false;
-            txtMatkhau.Enabled = false;
             txtSotien.Enabled = false;
+            txtMatkhau.Enabled = false;
             btnLuu.Hide();
             btnDoimk.Enabled = false;
             btnXoatk.Enabled = false;
@@ -41,8 +42,8 @@ namespace DoDuyDat_QLQuanGame_CDTH17
         void unlockControl()
         {
             txtTaikhoan.Enabled = true;
-            txtMatkhau.Enabled = true;
             txtSotien.Enabled = true;
+            txtMatkhau.Enabled = true;
         }
 
         void unlockControl2()
@@ -61,6 +62,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
         }
         private void btnTaotk_Click(object sender, EventArgs e)
         {
+            resetText();
             unlockControl();
             btnTaotk.Hide();
             btnLuu.Show();
@@ -68,53 +70,89 @@ namespace DoDuyDat_QLQuanGame_CDTH17
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (flagAction == "add")
+            if (txtTaikhoan.Text == "" || txtMatkhau.Text == "" )
             {
-                NguoiDung nd = new NguoiDung();
-                nd.ID_User = txtTaikhoan.Text;
-                nd.ID_Password = txtMatkhau.Text;
-                nd.ID_Money = int.Parse(txtSotien.Text);
-                db.NguoiDungs.Add(nd);
-                db.SaveChanges();
+                MessageBox.Show("Các trường không được để trống !", "Thông Báo");
+            }
+            else { 
+                if (flagAction == "add")
+                {
+                    NguoiDung nd = new NguoiDung();
+                    QuanTri qt = new QuanTri();
+                    nd.ID_User = txtTaikhoan.Text;
+                    nd.ID_Password = txtMatkhau.Text;
+                    qt.ID_User = txtTaikhoan.Text;
+                    qt.PhanQuyen = "User";
+                    System.Text.RegularExpressions.Regex re = new System.Text.RegularExpressions.Regex("[^0-9-]+");
+                    if (txtSotien.Text.Length > 0)
+                    {
+                        if (re.IsMatch(txtSotien.Text))
+                        {
+                            MessageBox.Show("Số tiền phải nhập bằng số !", "Thông Báo");
+                            reset();
+                        }
+                        else
+                        {
+                            nd.ID_Money = int.Parse(txtSotien.Text);
+                            db.NguoiDungs.Add(nd);
+                            db.QuanTris.Add(qt);
+                            db.SaveChanges();
+                            MessageBox.Show("Tạo tài khoản thành công !", "Thông Báo");
+                        }
+                    }
+                    else
+                    {
+                        if (txtSotien.Text.Length <= 0)
+                        {
+                            MessageBox.Show("Số tiền không được để trống", "Thông Báo");
+                            reset();
+                        }
+                    }
+                }
             }
             btnLuu.Hide();
             btnTaotk.Show();
             reset();
             loadDataGridView();
+            lockControl();
         }
 
         private void btnDoimk_Click(object sender, EventArgs e)
         {
             txtMatkhau.Enabled = true;
-            if (flagAction == "add")
+            if (currentND != null)
             {
-                NguoiDung nd = new NguoiDung();
-                nd.ID_Password = txtMatkhau.Text;
-                db.NguoiDungs.Add(nd);
-                db.SaveChanges();
-            }
-            if (flagAction == "update")
-            {
-                if (currentND != null)
+                flagAction = "update";
+                if (flagAction == "update")
                 {
-                    NguoiDung nd = db.NguoiDungs.Where(x => x.ID_User == currentND.ID_User).FirstOrDefault();
-                    if (nd != null)
+                    if (currentND != null)
                     {
-                        nd.ID_Password = txtMatkhau.Text;
-                        db.SaveChanges();
-                        currentND = null;
+                        NguoiDung nd = db.NguoiDungs.Where(x => x.ID_User == currentND.ID_User).FirstOrDefault();
+                        if (nd != null)
+                        {
+                            nd.ID_Password = txtMatkhau.Text;
+                            db.SaveChanges();
+                            currentND = null;
+                        }
+                        flagAction = "add";
+                        btnLuu.Enabled = false;
+                        btnReset.Enabled = true;
                     }
-                    flagAction = "add";
-                    btnLuu.Enabled = false;
-                    btnReset.Enabled = true;
                 }
             }
+            loadDataGridView();
+            reset();
+            lockControl();
         }
-
+        public delegate void delPassData(TextBox text);
         private void btnNaptien_Click(object sender, EventArgs e)
         {
-            AddMoney frmAddMoney = new AddMoney();
-            frmAddMoney.Show();
+            ThemTien frmThemTien = new ThemTien();
+            delPassData del = new delPassData(frmThemTien.funData);
+            del(this.txtTaikhoan);
+            frmThemTien.Show();
+
+            
         }
 
         private void btnXoatk_Click(object sender, EventArgs e)
@@ -129,12 +167,21 @@ namespace DoDuyDat_QLQuanGame_CDTH17
             loadDataGridView();
             lockControl();
         }
-
-        void reset()
+        void resetText()
         {
             txtTaikhoan.Text = "";
             txtMatkhau.Text = "";
             txtSotien.Text = "";
+            lockControl();
+        }
+        void reset()
+        {
+            txtTaikhoan.Text = "";
+            txtMatkhau.Text = "";
+            txtSotien.Text = "";           
+            lockControl();
+            btnLuu.Hide();
+            btnTaotk.Show();
         }
         private void btnThoat_Click(object sender, EventArgs e)
         {
@@ -145,6 +192,8 @@ namespace DoDuyDat_QLQuanGame_CDTH17
         {
             currentND = (dgvNguoiDung.DataSource as List<NguoiDung>).Skip(e.RowIndex).FirstOrDefault();
             bindToTextbox();
+            btnLuu.Hide();
+            btnTaotk.Show();
             unlockControl2();
         }
 
@@ -152,12 +201,13 @@ namespace DoDuyDat_QLQuanGame_CDTH17
         {
             txtTaikhoan.Text = currentND.ID_User;
             txtMatkhau.Text = currentND.ID_Password;
-            txtSotien.Text = Convert.ToString(currentND.ID_Money); ;
+            txtSotien.Text = Convert.ToString(currentND.ID_Money);
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
             reset();
         }
+
     }
 }

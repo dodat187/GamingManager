@@ -43,13 +43,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTaikhoan = new System.Windows.Forms.TextBox();
-            this.txtSotien = new System.Windows.Forms.TextBox();
             this.nguoiDungTableAdapter = new DoDuyDat_QLQuanGame_CDTH17.DoDuyDat_QLQuanGame_17DataSetTableAdapters.NguoiDungTableAdapter();
             this.btnDoimk = new System.Windows.Forms.Button();
-            this.txtMatkhau = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
+            this.txtMatkhau = new System.Windows.Forms.TextBox();
+            this.txtSotien = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNguoiDung)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nguoiDungBindingSource)).BeginInit();
@@ -181,13 +181,6 @@
             this.txtTaikhoan.Size = new System.Drawing.Size(215, 20);
             this.txtTaikhoan.TabIndex = 7;
             // 
-            // txtSotien
-            // 
-            this.txtSotien.Location = new System.Drawing.Point(491, 85);
-            this.txtSotien.Name = "txtSotien";
-            this.txtSotien.Size = new System.Drawing.Size(215, 20);
-            this.txtSotien.TabIndex = 8;
-            // 
             // nguoiDungTableAdapter
             // 
             this.nguoiDungTableAdapter.ClearBeforeFill = true;
@@ -202,13 +195,6 @@
             this.btnDoimk.Text = "Đổi Mật Khẩu";
             this.btnDoimk.UseVisualStyleBackColor = true;
             this.btnDoimk.Click += new System.EventHandler(this.btnDoimk_Click);
-            // 
-            // txtMatkhau
-            // 
-            this.txtMatkhau.Location = new System.Drawing.Point(491, 50);
-            this.txtMatkhau.Name = "txtMatkhau";
-            this.txtMatkhau.Size = new System.Drawing.Size(215, 20);
-            this.txtMatkhau.TabIndex = 11;
             // 
             // label3
             // 
@@ -242,17 +228,31 @@
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // txtMatkhau
+            // 
+            this.txtMatkhau.Location = new System.Drawing.Point(491, 51);
+            this.txtMatkhau.Name = "txtMatkhau";
+            this.txtMatkhau.Size = new System.Drawing.Size(215, 20);
+            this.txtMatkhau.TabIndex = 14;
+            // 
+            // txtSotien
+            // 
+            this.txtSotien.Location = new System.Drawing.Point(491, 87);
+            this.txtSotien.Name = "txtSotien";
+            this.txtSotien.Size = new System.Drawing.Size(215, 20);
+            this.txtSotien.TabIndex = 15;
+            // 
             // UserManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(771, 470);
+            this.Controls.Add(this.txtSotien);
+            this.Controls.Add(this.txtMatkhau);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.txtMatkhau);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnDoimk);
-            this.Controls.Add(this.txtSotien);
             this.Controls.Add(this.txtTaikhoan);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -285,7 +285,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTaikhoan;
-        private System.Windows.Forms.TextBox txtSotien;
         private System.Windows.Forms.DataGridView dgvNguoiDung;
         private DoDuyDat_QLQuanGame_17DataSet doDuyDat_QLQuanGame_17DataSet;
         private System.Windows.Forms.BindingSource nguoiDungBindingSource;
@@ -294,9 +293,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iDUserDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_Password;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDMoneyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox txtMatkhau;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.TextBox txtMatkhau;
+        private System.Windows.Forms.TextBox txtSotien;
     }
 }
