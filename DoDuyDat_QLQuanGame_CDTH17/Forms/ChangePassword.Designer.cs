@@ -31,11 +31,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtTaikhoan = new System.Windows.Forms.TextBox();
+            this.txtMatkhau = new System.Windows.Forms.TextBox();
+            this.txtNhaplaiMK = new System.Windows.Forms.TextBox();
+            this.btnDoimk = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -54,9 +54,9 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 17);
+            this.label2.Size = new System.Drawing.Size(95, 17);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Mật khẩu :";
+            this.label2.Text = "Mật Khẩu Cũ :";
             // 
             // label3
             // 
@@ -64,61 +64,63 @@
             this.label3.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 96);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 17);
+            this.label3.Size = new System.Drawing.Size(98, 17);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Nhập lại Mật khẩu :";
+            this.label3.Text = "Mật Khẩu Mới :";
             // 
-            // textBox1
+            // txtTaikhoan
             // 
-            this.textBox1.Location = new System.Drawing.Point(144, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(237, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtTaikhoan.Location = new System.Drawing.Point(144, 21);
+            this.txtTaikhoan.Name = "txtTaikhoan";
+            this.txtTaikhoan.Size = new System.Drawing.Size(237, 20);
+            this.txtTaikhoan.TabIndex = 3;
             // 
-            // textBox2
+            // txtMatkhau
             // 
-            this.textBox2.Location = new System.Drawing.Point(144, 56);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(237, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtMatkhau.Location = new System.Drawing.Point(144, 56);
+            this.txtMatkhau.Name = "txtMatkhau";
+            this.txtMatkhau.Size = new System.Drawing.Size(237, 20);
+            this.txtMatkhau.TabIndex = 4;
             // 
-            // textBox3
+            // txtNhaplaiMK
             // 
-            this.textBox3.Location = new System.Drawing.Point(144, 93);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(237, 20);
-            this.textBox3.TabIndex = 5;
+            this.txtNhaplaiMK.Location = new System.Drawing.Point(144, 93);
+            this.txtNhaplaiMK.Name = "txtNhaplaiMK";
+            this.txtNhaplaiMK.Size = new System.Drawing.Size(237, 20);
+            this.txtNhaplaiMK.TabIndex = 5;
             // 
-            // button1
+            // btnDoimk
             // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(67, 134);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 45);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Lưu";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDoimk.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoimk.Location = new System.Drawing.Point(41, 134);
+            this.btnDoimk.Name = "btnDoimk";
+            this.btnDoimk.Size = new System.Drawing.Size(125, 45);
+            this.btnDoimk.TabIndex = 6;
+            this.btnDoimk.Text = "Đổi mật khẩu";
+            this.btnDoimk.UseVisualStyleBackColor = true;
+            this.btnDoimk.Click += new System.EventHandler(this.btnDoimk_Click);
             // 
-            // button2
+            // btnHuy
             // 
-            this.button2.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(214, 134);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 45);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Hủy";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnHuy.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Location = new System.Drawing.Point(282, 134);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(99, 45);
+            this.btnHuy.TabIndex = 7;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // ChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(404, 184);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.btnDoimk);
+            this.Controls.Add(this.txtNhaplaiMK);
+            this.Controls.Add(this.txtMatkhau);
+            this.Controls.Add(this.txtTaikhoan);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -126,7 +128,8 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ChangePassword";
+            this.Text = "Đổi Mật Khẩu";
+            this.Load += new System.EventHandler(this.ChangePassword_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,10 +140,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtTaikhoan;
+        private System.Windows.Forms.TextBox txtMatkhau;
+        private System.Windows.Forms.TextBox txtNhaplaiMK;
+        private System.Windows.Forms.Button btnDoimk;
+        private System.Windows.Forms.Button btnHuy;
     }
 }

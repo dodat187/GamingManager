@@ -64,6 +64,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connect.cs" />
+    <Compile Include="DataSet\DichVu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DichVu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\HoaDon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HoaDon.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\NguoiDung.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NguoiDung.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\QLNet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLNet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\ThietBi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThietBi.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DoDuyDat_QLQuanGame_17DataSet.cs">
       <DependentUpon>DoDuyDat_QLQuanGame_17DataSet.xsd</DependentUpon>
     </Compile>
@@ -252,6 +278,61 @@
     <EmbeddedResource Include="Forms\UserManager.resx">
       <DependentUpon>UserManager.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataSet\DichVu.xsc">
+      <DependentUpon>DichVu.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DichVu.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DichVu.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DichVu.xss">
+      <DependentUpon>DichVu.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\HoaDon.xsc">
+      <DependentUpon>HoaDon.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\HoaDon.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HoaDon.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\HoaDon.xss">
+      <DependentUpon>HoaDon.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\NguoiDung.xsc">
+      <DependentUpon>NguoiDung.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\NguoiDung.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NguoiDung.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\NguoiDung.xss">
+      <DependentUpon>NguoiDung.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\QLNet.xsc">
+      <DependentUpon>QLNet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\QLNet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLNet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\QLNet.xss">
+      <DependentUpon>QLNet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\ThietBi.xsc">
+      <DependentUpon>ThietBi.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\ThietBi.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ThietBi.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\ThietBi.xss">
+      <DependentUpon>ThietBi.xsd</DependentUpon>
+    </None>
     <None Include="DoDuyDat_QLQuanGame_17DataSet.xsc">
       <DependentUpon>DoDuyDat_QLQuanGame_17DataSet.xsd</DependentUpon>
     </None>

@@ -46,10 +46,10 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.dichVuTableAdapter = new DoDuyDat_QLQuanGame_CDTH17.DoDuyDat_QLQuanGame_17DataSetTableAdapters.DichVuTableAdapter();
             this.btnReset = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.maDVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenDVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.donGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnLuu = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVu)).BeginInit();
@@ -66,38 +66,38 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(0, 31);
+            this.groupBox1.Location = new System.Drawing.Point(6, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(770, 64);
+            this.groupBox1.Size = new System.Drawing.Size(1118, 112);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Sản Phẩm";
             // 
             // txtDonGia
             // 
-            this.txtDonGia.Location = new System.Drawing.Point(597, 21);
+            this.txtDonGia.Location = new System.Drawing.Point(870, 36);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(162, 24);
             this.txtDonGia.TabIndex = 11;
             // 
             // txtTenSP
             // 
-            this.txtTenSP.Location = new System.Drawing.Point(324, 21);
+            this.txtTenSP.Location = new System.Drawing.Point(478, 36);
             this.txtTenSP.Name = "txtTenSP";
-            this.txtTenSP.Size = new System.Drawing.Size(146, 24);
+            this.txtTenSP.Size = new System.Drawing.Size(190, 24);
             this.txtTenSP.TabIndex = 10;
             // 
             // txtMaSP
             // 
-            this.txtMaSP.Location = new System.Drawing.Point(67, 21);
+            this.txtMaSP.Location = new System.Drawing.Point(135, 38);
             this.txtMaSP.Name = "txtMaSP";
-            this.txtMaSP.Size = new System.Drawing.Size(147, 24);
+            this.txtMaSP.Size = new System.Drawing.Size(165, 24);
             this.txtMaSP.TabIndex = 9;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(526, 26);
+            this.label3.Location = new System.Drawing.Point(799, 41);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 17);
             this.label3.TabIndex = 8;
@@ -106,7 +106,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(258, 26);
+            this.label2.Location = new System.Drawing.Point(412, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 17);
             this.label2.TabIndex = 7;
@@ -115,7 +115,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 26);
+            this.label1.Location = new System.Drawing.Point(74, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 17);
             this.label1.TabIndex = 6;
@@ -125,9 +125,9 @@
             // 
             this.groupBox2.Controls.Add(this.dgvDichVu);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(0, 122);
+            this.groupBox2.Location = new System.Drawing.Point(6, 122);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(770, 297);
+            this.groupBox2.Size = new System.Drawing.Size(1118, 404);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh Sách Sản Phẩm";
@@ -143,7 +143,7 @@
             this.dgvDichVu.DataSource = this.dichVuBindingSource;
             this.dgvDichVu.Location = new System.Drawing.Point(6, 23);
             this.dgvDichVu.Name = "dgvDichVu";
-            this.dgvDichVu.Size = new System.Drawing.Size(758, 268);
+            this.dgvDichVu.Size = new System.Drawing.Size(1106, 368);
             this.dgvDichVu.TabIndex = 12;
             this.dgvDichVu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDichVu_CellClick);
             this.dgvDichVu.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDichVu_CellDoubleClick);
@@ -161,7 +161,7 @@
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(627, 426);
+            this.btnThoat.Location = new System.Drawing.Point(979, 532);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(114, 32);
             this.btnThoat.TabIndex = 11;
@@ -172,7 +172,7 @@
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(324, 425);
+            this.btnXoa.Location = new System.Drawing.Point(516, 532);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(114, 32);
             this.btnXoa.TabIndex = 10;
@@ -183,7 +183,7 @@
             // btnSua
             // 
             this.btnSua.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(180, 426);
+            this.btnSua.Location = new System.Drawing.Point(268, 532);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(114, 32);
             this.btnSua.TabIndex = 9;
@@ -194,7 +194,7 @@
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(30, 426);
+            this.btnThem.Location = new System.Drawing.Point(43, 533);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(114, 32);
             this.btnThem.TabIndex = 8;
@@ -208,7 +208,7 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(488, 426);
+            this.btnReset.Location = new System.Drawing.Point(762, 532);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(103, 32);
             this.btnReset.TabIndex = 12;
@@ -216,31 +216,10 @@
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
-            // maDVDataGridViewTextBoxColumn
-            // 
-            this.maDVDataGridViewTextBoxColumn.DataPropertyName = "MaDV";
-            this.maDVDataGridViewTextBoxColumn.HeaderText = "Mã Dịch Vụ";
-            this.maDVDataGridViewTextBoxColumn.Name = "maDVDataGridViewTextBoxColumn";
-            this.maDVDataGridViewTextBoxColumn.Width = 250;
-            // 
-            // tenDVDataGridViewTextBoxColumn
-            // 
-            this.tenDVDataGridViewTextBoxColumn.DataPropertyName = "TenDV";
-            this.tenDVDataGridViewTextBoxColumn.HeaderText = "Tên Dịch Vụ";
-            this.tenDVDataGridViewTextBoxColumn.Name = "tenDVDataGridViewTextBoxColumn";
-            this.tenDVDataGridViewTextBoxColumn.Width = 250;
-            // 
-            // donGiaDataGridViewTextBoxColumn
-            // 
-            this.donGiaDataGridViewTextBoxColumn.DataPropertyName = "DonGia";
-            this.donGiaDataGridViewTextBoxColumn.HeaderText = "Đơn Giá";
-            this.donGiaDataGridViewTextBoxColumn.Name = "donGiaDataGridViewTextBoxColumn";
-            this.donGiaDataGridViewTextBoxColumn.Width = 250;
-            // 
             // btnLuu
             // 
             this.btnLuu.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(30, 426);
+            this.btnLuu.Location = new System.Drawing.Point(43, 532);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(114, 32);
             this.btnLuu.TabIndex = 13;
@@ -248,11 +227,32 @@
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
+            // maDVDataGridViewTextBoxColumn
+            // 
+            this.maDVDataGridViewTextBoxColumn.DataPropertyName = "MaDV";
+            this.maDVDataGridViewTextBoxColumn.HeaderText = "Mã Dịch Vụ";
+            this.maDVDataGridViewTextBoxColumn.Name = "maDVDataGridViewTextBoxColumn";
+            this.maDVDataGridViewTextBoxColumn.Width = 350;
+            // 
+            // tenDVDataGridViewTextBoxColumn
+            // 
+            this.tenDVDataGridViewTextBoxColumn.DataPropertyName = "TenDV";
+            this.tenDVDataGridViewTextBoxColumn.HeaderText = "Tên Dịch Vụ";
+            this.tenDVDataGridViewTextBoxColumn.Name = "tenDVDataGridViewTextBoxColumn";
+            this.tenDVDataGridViewTextBoxColumn.Width = 350;
+            // 
+            // donGiaDataGridViewTextBoxColumn
+            // 
+            this.donGiaDataGridViewTextBoxColumn.DataPropertyName = "DonGia";
+            this.donGiaDataGridViewTextBoxColumn.HeaderText = "Đơn Giá";
+            this.donGiaDataGridViewTextBoxColumn.Name = "donGiaDataGridViewTextBoxColumn";
+            this.donGiaDataGridViewTextBoxColumn.Width = 350;
+            // 
             // MenuManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 470);
+            this.ClientSize = new System.Drawing.Size(1130, 590);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.groupBox1);
@@ -263,8 +263,7 @@
             this.Controls.Add(this.btnThem);
             this.Name = "MenuManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MenuManager";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Text = "Quản Lý Thực Đơn";
             this.Load += new System.EventHandler(this.MenuManager_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -295,9 +294,9 @@
         private System.Windows.Forms.BindingSource dichVuBindingSource;
         private DoDuyDat_QLQuanGame_17DataSetTableAdapters.DichVuTableAdapter dichVuTableAdapter;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.DataGridViewTextBoxColumn maDVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenDVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn donGiaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button btnLuu;
     }
 }

@@ -25,5 +25,6 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
             this.chiTietSuDungTableAdapter.Fill(this.doDuyDat_QLQuanGame_17DataSet.ChiTietSuDung);
 
         }
+
     }
 }

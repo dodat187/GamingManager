@@ -13,6 +13,9 @@ namespace DoDuyDat_QLQuanGame_CDTH17
         {
             InitializeComponent();
         }
+        public static string lbus;
+        Connect cn = new Connect();
+
         private bool CheckExistForm(string name)
         {
             bool check = false;

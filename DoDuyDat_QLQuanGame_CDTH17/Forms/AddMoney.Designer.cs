@@ -28,58 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnAddMoney = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.cbbUS = new System.Windows.Forms.ComboBox();
+            this.txtPMN = new System.Windows.Forms.TextBox();
+            this.txtAMN = new System.Windows.Forms.TextBox();
+            this.txtTMN = new System.Windows.Forms.TextBox();
+            this.nguoiDung = new DoDuyDat_QLQuanGame_CDTH17.DataSet.NguoiDung();
+            this.nguoiDungBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nguoiDungBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.nguoiDungTableAdapter = new DoDuyDat_QLQuanGame_CDTH17.DataSet.NguoiDungTableAdapters.NguoiDungTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.nguoiDung)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nguoiDungBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nguoiDungBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // btnThoat
             // 
-            this.button2.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(211, 170);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 38);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Thoát";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnThoat.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Location = new System.Drawing.Point(211, 170);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(120, 38);
+            this.btnThoat.TabIndex = 15;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // button1
+            // btnAddMoney
             // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 171);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 38);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Nạp Tiền";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(169, 130);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(162, 20);
-            this.textBox3.TabIndex = 13;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(169, 89);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(162, 20);
-            this.textBox2.TabIndex = 12;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(169, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 20);
-            this.textBox1.TabIndex = 11;
+            this.btnAddMoney.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddMoney.Location = new System.Drawing.Point(12, 171);
+            this.btnAddMoney.Name = "btnAddMoney";
+            this.btnAddMoney.Size = new System.Drawing.Size(120, 38);
+            this.btnAddMoney.TabIndex = 14;
+            this.btnAddMoney.Text = "Nạp Tiền";
+            this.btnAddMoney.UseVisualStyleBackColor = true;
+            this.btnAddMoney.Click += new System.EventHandler(this.btnAddMoney_Click);
             // 
             // label3
             // 
@@ -111,13 +100,6 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "TK hiện tại :";
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(169, 12);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(162, 20);
-            this.textBox4.TabIndex = 17;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -128,18 +110,69 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Tài Khoản :";
             // 
+            // cbbUS
+            // 
+            this.cbbUS.FormattingEnabled = true;
+            this.cbbUS.Location = new System.Drawing.Point(160, 14);
+            this.cbbUS.Name = "cbbUS";
+            this.cbbUS.Size = new System.Drawing.Size(171, 21);
+            this.cbbUS.TabIndex = 17;
+            this.cbbUS.SelectedValueChanged += new System.EventHandler(this.cbbUS_SelectedValueChanged);
+            // 
+            // txtPMN
+            // 
+            this.txtPMN.Location = new System.Drawing.Point(160, 54);
+            this.txtPMN.Name = "txtPMN";
+            this.txtPMN.Size = new System.Drawing.Size(171, 20);
+            this.txtPMN.TabIndex = 18;
+            // 
+            // txtAMN
+            // 
+            this.txtAMN.Location = new System.Drawing.Point(160, 90);
+            this.txtAMN.Name = "txtAMN";
+            this.txtAMN.Size = new System.Drawing.Size(171, 20);
+            this.txtAMN.TabIndex = 19;
+            this.txtAMN.TextChanged += new System.EventHandler(this.txtAMN_TextChanged);
+            // 
+            // txtTMN
+            // 
+            this.txtTMN.Location = new System.Drawing.Point(160, 132);
+            this.txtTMN.Name = "txtTMN";
+            this.txtTMN.Size = new System.Drawing.Size(171, 20);
+            this.txtTMN.TabIndex = 20;
+            this.txtTMN.TextChanged += new System.EventHandler(this.txtTMN_TextChanged);
+            // 
+            // nguoiDung
+            // 
+            this.nguoiDung.DataSetName = "NguoiDung";
+            this.nguoiDung.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nguoiDungBindingSource
+            // 
+            this.nguoiDungBindingSource.DataSource = this.nguoiDung;
+            this.nguoiDungBindingSource.Position = 0;
+            // 
+            // nguoiDungBindingSource1
+            // 
+            this.nguoiDungBindingSource1.DataMember = "NguoiDung";
+            this.nguoiDungBindingSource1.DataSource = this.nguoiDungBindingSource;
+            // 
+            // nguoiDungTableAdapter
+            // 
+            this.nguoiDungTableAdapter.ClearBeforeFill = true;
+            // 
             // AddMoney
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(343, 220);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtTMN);
+            this.Controls.Add(this.txtAMN);
+            this.Controls.Add(this.txtPMN);
+            this.Controls.Add(this.cbbUS);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.btnAddMoney);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -147,7 +180,11 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddMoney";
+            this.Text = "Thêm Tiền";
+            this.Load += new System.EventHandler(this.AddMoney_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nguoiDung)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nguoiDungBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nguoiDungBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,15 +192,19 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnAddMoney;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbbUS;
+        private System.Windows.Forms.TextBox txtPMN;
+        private System.Windows.Forms.TextBox txtAMN;
+        private System.Windows.Forms.TextBox txtTMN;
+        private DataSet.NguoiDung nguoiDung;
+        private System.Windows.Forms.BindingSource nguoiDungBindingSource;
+        private System.Windows.Forms.BindingSource nguoiDungBindingSource1;
+        private DataSet.NguoiDungTableAdapters.NguoiDungTableAdapter nguoiDungTableAdapter;
     }
 }

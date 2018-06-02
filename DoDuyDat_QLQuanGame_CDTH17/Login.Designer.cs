@@ -33,10 +33,10 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,13 +87,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Đăng Nhập";
             // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(193, 89);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(247, 27);
-            this.txtPassword.TabIndex = 7;
-            // 
             // txtUser
             // 
             this.txtUser.Location = new System.Drawing.Point(193, 44);
@@ -120,6 +113,14 @@
             this.label1.Size = new System.Drawing.Size(104, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "Tên Tài Khoản :";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(193, 89);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(247, 27);
+            this.txtPassword.TabIndex = 7;
             // 
             // Login
             // 
@@ -149,10 +150,10 @@
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtPassword;
     }
 }
 

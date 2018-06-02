@@ -41,11 +41,11 @@
             this.tsmMenuManager = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmBillManager = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmFunction = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmPhanQuyen = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmExit = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.Label();
-            this.tsmPhanQuyen = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +64,7 @@
             this.tsmFunction});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(771, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1150, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -161,17 +161,24 @@
             this.tsmFunction.Size = new System.Drawing.Size(79, 20);
             this.tsmFunction.Text = "Chức Năng";
             // 
+            // tsmPhanQuyen
+            // 
+            this.tsmPhanQuyen.Name = "tsmPhanQuyen";
+            this.tsmPhanQuyen.Size = new System.Drawing.Size(141, 22);
+            this.tsmPhanQuyen.Text = "Phân Quyền";
+            this.tsmPhanQuyen.Click += new System.EventHandler(this.tsmPhanQuyen_Click);
+            // 
             // tsmLogout
             // 
             this.tsmLogout.Name = "tsmLogout";
-            this.tsmLogout.Size = new System.Drawing.Size(152, 22);
+            this.tsmLogout.Size = new System.Drawing.Size(141, 22);
             this.tsmLogout.Text = "Đăng Xuất";
             this.tsmLogout.Click += new System.EventHandler(this.tsmLogout_Click);
             // 
             // tsmExit
             // 
             this.tsmExit.Name = "tsmExit";
-            this.tsmExit.Size = new System.Drawing.Size(152, 22);
+            this.tsmExit.Size = new System.Drawing.Size(141, 22);
             this.tsmExit.Text = "Thoát";
             this.tsmExit.Click += new System.EventHandler(this.tsmExit_Click);
             // 
@@ -191,19 +198,12 @@
             this.txtID.Size = new System.Drawing.Size(0, 13);
             this.txtID.TabIndex = 3;
             // 
-            // tsmPhanQuyen
-            // 
-            this.tsmPhanQuyen.Name = "tsmPhanQuyen";
-            this.tsmPhanQuyen.Size = new System.Drawing.Size(152, 22);
-            this.tsmPhanQuyen.Text = "Phân Quyền";
-            this.tsmPhanQuyen.Click += new System.EventHandler(this.tsmPhanQuyen_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources._28822594_1869285000030337_1040742205_o;
-            this.ClientSize = new System.Drawing.Size(771, 491);
+            this.ClientSize = new System.Drawing.Size(1150, 702);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -212,7 +212,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Giao Diện Quản Lý";
+            this.Text = "IT GAMING - 252 Nguyễn Trãi - Thanh Xuân - Hà Nội";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

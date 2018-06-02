@@ -14,13 +14,13 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
     public partial class ThemTien : Form
     {
         DoDuyDat_QLQuanGame_17Entities db = new DoDuyDat_QLQuanGame_17Entities();
-        private NguoiDung currentND;
-        string flagAction = "add";
 
         public ThemTien()
         {
             InitializeComponent();
         }
+
+        Connect cn = new Connect();
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
@@ -29,46 +29,81 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
 
         private void btnNaptien_Click(object sender, EventArgs e)
         {
-            if (flagAction == "add")
+            if (this.txtUS.Text == "manager" || this.txtUS.Text == "admin")
             {
-                NguoiDung nd = new NguoiDung();
-                nd.ID_User = txtTaikhoan.Text;
-                nd.ID_Password = nd.ID_Password;
-                nd.ID_Money = nd.ID_Money + int.Parse(txtSotien.Text);
-                db.NguoiDungs.Add(nd);
-                db.SaveChanges();
+                MessageBox.Show("Không thể nạp tiền cho tài khoản này.", "Thông Báo");
+                this.Close();
             }
-                if (flagAction == "update")
-                {
-                    if (currentND != null)
-                    {
-                        NguoiDung nd = db.NguoiDungs.Where(x => x.ID_User == currentND.ID_User).FirstOrDefault();
-                        if (nd != null)
-                        {
-                            nd.ID_User = txtTaikhoan.Text;
-                            nd.ID_Password = nd.ID_Password;
-                            nd.ID_Money = nd.ID_Money + int.Parse(txtSotien.Text);
-                            db.SaveChanges();
-                            currentND = null;
-                        }
-                        flagAction = "add";
-                    }
-                }
+            else
+            {
+                cn.DDL("Update NguoiDung set ID_Money='" + txtTMN.Text.ToString() + "' where ID_User='" + txtUS.Text.ToString() + "'");
+                MessageBox.Show("Nạp tiền thành công !!!", "Thông Báo");
+                this.Close();
+            }
+
+            //if (currentND != null)
+            //{
+            //    flagAction = "update";
+            //    if (flagAction == "update")
+            //    {
+            //        if (currentND != null)
+            //        {
+            //            NguoiDung nd = db.NguoiDungs.Where(x => x.ID_User == currentND.ID_User).FirstOrDefault();
+            //            if (nd != null)
+            //            {
+            //                nd.ID_Money = int.Parse(txtTongtien.Text);
+            //                db.SaveChanges();
+            //                currentND = null;
+            //            }
+            //            flagAction = "add";
+            //        }
+            //    }
+            //}
+            //this.Close();
         }
-        public void funData(TextBox txtForm1)
+
+        public void funData1(TextBox txtUser)
         {
-            txtTaikhoan.Text = txtForm1.Text;
+            txtUS.Text = txtUser.Text;
+        }
+        public void funData2(TextBox txtMoney)
+        {
+            txtPMN.Text = txtMoney.Text;
         }
 
         private void ThemTien_Load(object sender, EventArgs e)
         {
-            txtTaikhoan.Enabled = false;
+            txtUS.Enabled = false;
+            txtPMN.Enabled = false;
+            txtAMN.Enabled = true;
+            txtTMN.Enabled = false;
+            txtAMN.Text = "0";
+            
 
         }
 
-        private void txtTaikhoan_TextChanged(object sender, EventArgs e)
+        private new void Update()
         {
-            
+            try
+            {
+                int pm = Convert.ToInt32(txtPMN.Text);
+                int am = Convert.ToInt32(txtAMN.Text);
+                int tong = (pm + am);
+                txtTMN.Text = tong.ToString();
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
+        private void txtPMN_TextChanged(object sender, EventArgs e)
+        {
+            Update();
+        }
+
+        private void txtAMN_TextChanged(object sender, EventArgs e)
+        {
+            Update();
         }
     }
 }

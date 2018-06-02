@@ -60,6 +60,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
         {
             dgvNguoiDung.DataSource = db.NguoiDungs.ToList();
         }
+
         private void btnTaotk_Click(object sender, EventArgs e)
         {
             resetText();
@@ -148,11 +149,11 @@ namespace DoDuyDat_QLQuanGame_CDTH17
         private void btnNaptien_Click(object sender, EventArgs e)
         {
             ThemTien frmThemTien = new ThemTien();
-            delPassData del = new delPassData(frmThemTien.funData);
-            del(this.txtTaikhoan);
-            frmThemTien.Show();
-
-            
+            delPassData del1 = new delPassData(frmThemTien.funData1);
+            del1(this.txtTaikhoan);
+            delPassData del2 = new delPassData(frmThemTien.funData2);
+            del2(this.txtSotien);
+            frmThemTien.Show();  
         }
 
         private void btnXoatk_Click(object sender, EventArgs e)

@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.crv = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -39,13 +40,13 @@
             this.txtTongtien = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaCTHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chiTietHoaDonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.doDuyDat_QLQuanGame_17DataSet = new DoDuyDat_QLQuanGame_CDTH17.DoDuyDat_QLQuanGame_17DataSet();
             this.chiTietHoaDonTableAdapter = new DoDuyDat_QLQuanGame_CDTH17.DoDuyDat_QLQuanGame_17DataSetTableAdapters.ChiTietHoaDonTableAdapter();
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chiTietHoaDonBindingSource)).BeginInit();
@@ -54,13 +55,25 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.crystalReportViewer1);
+            this.groupBox1.Controls.Add(this.crv);
             this.groupBox1.Location = new System.Drawing.Point(1, 216);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(769, 277);
+            this.groupBox1.Size = new System.Drawing.Size(1130, 372);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hóa Đơn";
+            // 
+            // crv
+            // 
+            this.crv.ActiveViewIndex = -1;
+            this.crv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crv.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crv.DisplayToolbar = false;
+            this.crv.Location = new System.Drawing.Point(1, 16);
+            this.crv.Name = "crv";
+            this.crv.Size = new System.Drawing.Size(1128, 353);
+            this.crv.TabIndex = 10;
+            this.crv.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // comboBox1
             // 
@@ -89,7 +102,6 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "In Hóa Đơn";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -134,40 +146,48 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
+            this.MaCTHD,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.dataGridView1.DataSource = this.chiTietHoaDonBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(233, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(240, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(534, 206);
+            this.dataGridView1.Size = new System.Drawing.Size(885, 215);
             this.dataGridView1.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "MaHD";
-            this.dataGridViewTextBoxColumn1.HeaderText = "MaHD";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã Hóa Đơn";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 125;
+            this.dataGridViewTextBoxColumn1.Width = 200;
+            // 
+            // MaCTHD
+            // 
+            this.MaCTHD.DataPropertyName = "MaCTHD";
+            this.MaCTHD.HeaderText = "Mã CT Hóa Đơn";
+            this.MaCTHD.Name = "MaCTHD";
+            this.MaCTHD.Width = 200;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "MaDV";
-            this.dataGridViewTextBoxColumn3.HeaderText = "MaDV";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Mã Dịch Vụ";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 125;
+            this.dataGridViewTextBoxColumn3.Width = 200;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "SoluongDV";
-            this.dataGridViewTextBoxColumn4.HeaderText = "SoluongDV";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Số Lượng";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.Width = 125;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "ThanhTien";
-            this.dataGridViewTextBoxColumn5.HeaderText = "ThanhTien";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Thành Tiền";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.Width = 125;
             // 
@@ -185,21 +205,11 @@
             // 
             this.chiTietHoaDonTableAdapter.ClearBeforeFill = true;
             // 
-            // crystalReportViewer1
-            // 
-            this.crystalReportViewer1.ActiveViewIndex = -1;
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 19);
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(766, 252);
-            this.crystalReportViewer1.TabIndex = 10;
-            // 
             // BillManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 494);
+            this.ClientSize = new System.Drawing.Size(1130, 590);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtTongtien);
             this.Controls.Add(this.label1);
@@ -211,8 +221,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "BillManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BillManager";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Text = "Quản Lý Hóa Đơn";
             this.Load += new System.EventHandler(this.BillManager_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -238,9 +247,10 @@
         private System.Windows.Forms.BindingSource chiTietHoaDonBindingSource;
         private DoDuyDat_QLQuanGame_17DataSetTableAdapters.ChiTietHoaDonTableAdapter chiTietHoaDonTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaCTHD;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crv;
     }
 }
