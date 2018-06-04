@@ -36,10 +36,12 @@
             this.tsmAddUser = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmChangePassword = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAddMoney = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmPCService = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmPCManager = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmService = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmMenuManager = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmBillManager = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmCreatBill = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmFunction = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmPhanQuyen = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmLogout = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,6 +83,7 @@
             // 
             this.tsmManager.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmManagerAccount,
+            this.tsmPCService,
             this.tsmPCManager});
             this.tsmManager.Font = new System.Drawing.Font("Tahoma", 9F);
             this.tsmManager.Name = "tsmManager";
@@ -94,7 +97,7 @@
             this.tsmChangePassword,
             this.tsmAddMoney});
             this.tsmManagerAccount.Name = "tsmManagerAccount";
-            this.tsmManagerAccount.Size = new System.Drawing.Size(177, 22);
+            this.tsmManagerAccount.Size = new System.Drawing.Size(188, 22);
             this.tsmManagerAccount.Text = "Quản Lý Tài Khoản";
             this.tsmManagerAccount.Click += new System.EventHandler(this.tsmManagerAccount_Click_1);
             // 
@@ -119,10 +122,17 @@
             this.tsmAddMoney.Text = "Nạp Tiền";
             this.tsmAddMoney.Click += new System.EventHandler(this.tsmAddMoney_Click);
             // 
+            // tsmPCService
+            // 
+            this.tsmPCService.Name = "tsmPCService";
+            this.tsmPCService.Size = new System.Drawing.Size(188, 22);
+            this.tsmPCService.Text = "Quản Lý Người Dùng";
+            this.tsmPCService.Click += new System.EventHandler(this.tsmPCService_Click);
+            // 
             // tsmPCManager
             // 
             this.tsmPCManager.Name = "tsmPCManager";
-            this.tsmPCManager.Size = new System.Drawing.Size(177, 22);
+            this.tsmPCManager.Size = new System.Drawing.Size(188, 22);
             this.tsmPCManager.Text = "Quản Lý Thiết Bị";
             this.tsmPCManager.Click += new System.EventHandler(this.tsmPCManager_Click);
             // 
@@ -130,7 +140,8 @@
             // 
             this.tsmService.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmMenuManager,
-            this.tsmBillManager});
+            this.tsmBillManager,
+            this.tsmCreatBill});
             this.tsmService.Font = new System.Drawing.Font("Tahoma", 9F);
             this.tsmService.Name = "tsmService";
             this.tsmService.Size = new System.Drawing.Size(61, 20);
@@ -149,6 +160,13 @@
             this.tsmBillManager.Size = new System.Drawing.Size(178, 22);
             this.tsmBillManager.Text = "Quản Lý Hóa Đơn";
             this.tsmBillManager.Click += new System.EventHandler(this.tsmBillManager_Click);
+            // 
+            // tsmCreatBill
+            // 
+            this.tsmCreatBill.Name = "tsmCreatBill";
+            this.tsmCreatBill.Size = new System.Drawing.Size(178, 22);
+            this.tsmCreatBill.Text = "Tạo Hóa Đơn";
+            this.tsmCreatBill.Click += new System.EventHandler(this.tsmCreatBill_Click);
             // 
             // tsmFunction
             // 
@@ -231,7 +249,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmLogout;
         private System.Windows.Forms.ToolStripMenuItem tsmExit;
         private System.Windows.Forms.ToolStripMenuItem tsmManagerAccount;
-        private System.Windows.Forms.ToolStripMenuItem tsmPCManager;
+        private System.Windows.Forms.ToolStripMenuItem tsmPCService;
         private System.Windows.Forms.ToolStripMenuItem tsmMenuManager;
         private System.Windows.Forms.ToolStripMenuItem tsmBillManager;
         private System.Windows.Forms.ToolStripMenuItem tsmAddUser;
@@ -240,5 +258,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label txtID;
         private System.Windows.Forms.ToolStripMenuItem tsmPhanQuyen;
+        private System.Windows.Forms.ToolStripMenuItem tsmCreatBill;
+        private System.Windows.Forms.ToolStripMenuItem tsmPCManager;
     }
 }

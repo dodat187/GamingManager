@@ -65,7 +65,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.ToString());
             }
         }
 

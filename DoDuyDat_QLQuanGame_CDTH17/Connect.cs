@@ -28,9 +28,16 @@ namespace DoDuyDat_QLQuanGame_CDTH17
         }
         public void NKN()
         {
-            if (cn.State != 0)
+            try
             {
-               cn.Close();
+                if (cn.State != 0)
+                {
+                    cn.Close();
+                }
+            }
+            catch (Exception)
+            {
+
             }
         }
         public DataTable XDL(string sql)
@@ -40,6 +47,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
             DataTable dt = new DataTable();
             adap.Fill(dt);
             return dt;
+            #pragma warning disable CS0162 // Unreachable code detected
             NKN();
         }
         public SqlCommand DDL(string sql)
@@ -48,6 +56,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
             SqlCommand cm = new SqlCommand(sql, cn);
             cm.ExecuteNonQuery();
             return cm;
+            #pragma warning disable CS0162 // Unreachable code detected
             NKN();
         }
     }

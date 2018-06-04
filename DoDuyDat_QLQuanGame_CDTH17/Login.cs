@@ -21,9 +21,9 @@ namespace DoDuyDat_QLQuanGame_CDTH17
                 con = new SqlConnection(cnn);
                 con.Open();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Không thể kết nối tới CSDL.", "Lỗi", MessageBoxButtons.OK);
+                MessageBox.Show("Không thể kết nối tới CSDL", "Lỗi", MessageBoxButtons.OK );
             }
         }
         private void disconnect()

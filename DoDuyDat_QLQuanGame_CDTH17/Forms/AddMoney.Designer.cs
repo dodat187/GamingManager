@@ -39,10 +39,10 @@
             this.txtPMN = new System.Windows.Forms.TextBox();
             this.txtAMN = new System.Windows.Forms.TextBox();
             this.txtTMN = new System.Windows.Forms.TextBox();
-            this.nguoiDung = new DoDuyDat_QLQuanGame_CDTH17.DataSet.NguoiDung();
+            this.nguoiDung = new DoDuyDat_QLQuanGame_CDTH17.DTS.NguoiDung();
             this.nguoiDungBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nguoiDungBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.nguoiDungTableAdapter = new DoDuyDat_QLQuanGame_CDTH17.DataSet.NguoiDungTableAdapters.NguoiDungTableAdapter();
+            this.nguoiDungTableAdapter = new DoDuyDat_QLQuanGame_CDTH17.DTS.NguoiDungTableAdapters.NguoiDungTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.nguoiDung)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nguoiDungBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nguoiDungBindingSource1)).BeginInit();
@@ -202,9 +202,9 @@
         private System.Windows.Forms.TextBox txtPMN;
         private System.Windows.Forms.TextBox txtAMN;
         private System.Windows.Forms.TextBox txtTMN;
-        private DataSet.NguoiDung nguoiDung;
+        private DTS.NguoiDung nguoiDung;
         private System.Windows.Forms.BindingSource nguoiDungBindingSource;
         private System.Windows.Forms.BindingSource nguoiDungBindingSource1;
-        private DataSet.NguoiDungTableAdapters.NguoiDungTableAdapter nguoiDungTableAdapter;
+        private DTS.NguoiDungTableAdapters.NguoiDungTableAdapter nguoiDungTableAdapter;
     }
 }

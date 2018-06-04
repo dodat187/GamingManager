@@ -93,6 +93,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.ToString());
             }
         }
 

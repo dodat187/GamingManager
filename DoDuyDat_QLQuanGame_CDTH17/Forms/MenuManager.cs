@@ -37,7 +37,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
         {
             DichVu lastDV = db.DichVus.OrderByDescending(x => x.MaDV).FirstOrDefault();
             string lastID = lastDV != null ? lastDV.MaDV : "";
-            string nextID = IdGenerate.genId(lastID, "DV00");
+            string nextID = IdGenerate.genId(lastID, "DV");
             txtMaSP.Text = nextID;
         }
         void lockControl()

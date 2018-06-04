@@ -46,10 +46,6 @@ C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\obj
 C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\obj\Debug\DoDuyDat_QLQuanGame_CDTH17.pdb
 C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\bin\Debug\DoDuyDat_QLQuanGame_CDTH17.exe
 C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\bin\Debug\DoDuyDat_QLQuanGame_CDTH17.pdb
-C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
-C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\bin\Debug\CrystalDecisions.ReportSource.dll
-C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\bin\Debug\CrystalDecisions.Shared.dll
-C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\bin\Debug\CrystalDecisions.Windows.Forms.dll
 C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\bin\Debug\EntityFramework.dll
 C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\bin\Debug\FlashControlV71.dll
@@ -69,7 +65,6 @@ C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\bin
 C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\bin\Debug\stdole.dll
 C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\bin\Debug\EntityFramework.xml
 C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\obj\Debug\DoDuyDat_QLQuanGame_CDTH17.csprojResolveAssemblyReference.cache
 C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\obj\Debug\DoDuyDat_QLQuanGame_CDTH17.AddMoney.resources
 C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\obj\Debug\DoDuyDat_QLQuanGame_CDTH17.AddUser.resources
 C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\obj\Debug\DoDuyDat_QLQuanGame_CDTH17.BillManager.resources
@@ -86,3 +81,13 @@ C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\obj
 C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\obj\Debug\DoDuyDat_QLQuanGame_CDTH17.Forms.PCService.resources
 C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\obj\Debug\DoDuyDat_QLQuanGame_CDTH17.Forms.ThemTien.resources
 C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\obj\Debug\DoDuyDat_QLQuanGame_CDTH17.PhanQuyen.resources
+D:\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\bin\Debug\DoDuyDat_QLQuanGame_CDTH17.exe.config
+D:\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\obj\Debug\DoDuyDat_QLQuanGame_CDTH17.exe
+D:\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\obj\Debug\DoDuyDat_QLQuanGame_CDTH17.pdb
+C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\obj\Debug\DoDuyDat_QLQuanGame_CDTH17.csproj.DoDuyDat_QLQuanGame_CDTH17.exe.config
+C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\obj\Debug\DoDuyDat_QLQuanGame_CDTH17.csprojResolveAssemblyReference.cache
+C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\bin\Debug\System.Data.SqlServerCe.Entity.dll
+C:\Users\doduy\Desktop\DoDuyDat_QLQuanGame_CDTH17\DoDuyDat_QLQuanGame_CDTH17\obj\Debug\DoDuyDat_QLQuanGame_CDTH17.Forms.PCManager.resources

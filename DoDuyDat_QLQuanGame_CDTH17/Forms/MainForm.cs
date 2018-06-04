@@ -83,20 +83,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
                 ActiveChildForm("MenuManager");
             }
         }
-
-        private void tsmPCManager_Click(object sender, EventArgs e)
-        {
-            if (!CheckExistForm("PCService"))
-            {
-                PCService frmPC = new PCService();
-                frmPC.MdiParent = this;
-                frmPC.Show();
-            }
-            else
-            {
-                ActiveChildForm("PCService");
-            }
-        }
+        
 
         private void tsmAddUser_Click(object sender, EventArgs e)
         {
@@ -194,6 +181,48 @@ namespace DoDuyDat_QLQuanGame_CDTH17
             else
             {
                 ActiveChildForm("PhanQuyen");
+            }
+        }
+
+        private void tsmCreatBill_Click(object sender, EventArgs e)
+        {
+            if (!CheckExistForm("CreatBill"))
+            {
+                CreatBill frmCreatBill = new CreatBill();
+                frmCreatBill.MdiParent = this;
+                frmCreatBill.Show();
+            }
+            else
+            {
+                ActiveChildForm("CreatBill");
+            }
+        }
+
+        private void tsmPCService_Click(object sender, EventArgs e)
+        {
+            if (!CheckExistForm("PCService"))
+            {
+                PCService frmPCService = new PCService();
+                frmPCService.MdiParent = this;
+                frmPCService.Show();
+            }
+            else
+            {
+                ActiveChildForm("PCService");
+            }
+        }
+
+        private void tsmPCManager_Click(object sender, EventArgs e)
+        {
+            if (!CheckExistForm("PCManager"))
+            {
+                PCManager frmPCManager = new PCManager();
+                frmPCManager.MdiParent = this;
+                frmPCManager.Show();
+            }
+            else
+            {
+                ActiveChildForm("PCManager");
             }
         }
     }

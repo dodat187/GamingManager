@@ -20,8 +20,8 @@
     <Property Name="MaCTSD" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="ID_PC" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="ID_User" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="Stime" Type="DateTime" Precision="3" />
-    <Property Name="Etime" Type="DateTime" Precision="3" />
+    <Property Name="Stime" Type="DateTime" />
+    <Property Name="Etime" Type="DateTime" />
     <NavigationProperty Name="NguoiDung" Relationship="Self.FK_ChiTietSuDung_NguoiDung" FromRole="ChiTietSuDung" ToRole="NguoiDung" />
     <NavigationProperty Name="ThietBi" Relationship="Self.FK_ChiTietSuDung_ThietBi" FromRole="ChiTietSuDung" ToRole="ThietBi" />
   </EntityType>
