@@ -30,7 +30,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
             txtMaHD.Enabled = false;
             txtMaHD.ReadOnly = true;
             loadListDV();
-            
+
         }
 
         void loaddgvHD()
@@ -77,7 +77,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
         {
             //while (ListDV.SelectedItems.Count > 0)
             //{
-                
+
             //}
             for (int i = 0; i < ListDV.SelectedItems.Count; i++)
             {

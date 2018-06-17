@@ -37,6 +37,13 @@
             this.btnEnd = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvCTSD = new System.Windows.Forms.DataGridView();
+            this.maCTSDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDPCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDUserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.etimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chiTietSuDungBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.doDuyDat_QLQuanGame_17DataSet = new DoDuyDat_QLQuanGame_CDTH17.DoDuyDat_QLQuanGame_17DataSet();
             this.label6 = new System.Windows.Forms.Label();
             this.cbbPC = new System.Windows.Forms.ComboBox();
             this.cbbUser = new System.Windows.Forms.ComboBox();
@@ -49,13 +56,6 @@
             this.txtTien = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtMaCTSD = new System.Windows.Forms.TextBox();
-            this.maCTSDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDPCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDUserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.etimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chiTietSuDungBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.doDuyDat_QLQuanGame_17DataSet = new DoDuyDat_QLQuanGame_CDTH17.DoDuyDat_QLQuanGame_17DataSet();
             this.chiTietSuDungTableAdapter = new DoDuyDat_QLQuanGame_CDTH17.DoDuyDat_QLQuanGame_17DataSetTableAdapters.ChiTietSuDungTableAdapter();
             this.txtHidden = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTSD)).BeginInit();
@@ -152,6 +152,51 @@
             this.dgvCTSD.Size = new System.Drawing.Size(1124, 365);
             this.dgvCTSD.TabIndex = 32;
             this.dgvCTSD.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTSD_CellDoubleClick);
+            // 
+            // maCTSDDataGridViewTextBoxColumn
+            // 
+            this.maCTSDDataGridViewTextBoxColumn.DataPropertyName = "MaCTSD";
+            this.maCTSDDataGridViewTextBoxColumn.HeaderText = "Mã CTSD";
+            this.maCTSDDataGridViewTextBoxColumn.Name = "maCTSDDataGridViewTextBoxColumn";
+            this.maCTSDDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // iDPCDataGridViewTextBoxColumn
+            // 
+            this.iDPCDataGridViewTextBoxColumn.DataPropertyName = "ID_PC";
+            this.iDPCDataGridViewTextBoxColumn.HeaderText = "Mã Máy";
+            this.iDPCDataGridViewTextBoxColumn.Name = "iDPCDataGridViewTextBoxColumn";
+            this.iDPCDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // iDUserDataGridViewTextBoxColumn
+            // 
+            this.iDUserDataGridViewTextBoxColumn.DataPropertyName = "ID_User";
+            this.iDUserDataGridViewTextBoxColumn.HeaderText = "Tài Khoản";
+            this.iDUserDataGridViewTextBoxColumn.Name = "iDUserDataGridViewTextBoxColumn";
+            this.iDUserDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // stimeDataGridViewTextBoxColumn
+            // 
+            this.stimeDataGridViewTextBoxColumn.DataPropertyName = "Stime";
+            this.stimeDataGridViewTextBoxColumn.HeaderText = "Thời Gian Bắt Đầu";
+            this.stimeDataGridViewTextBoxColumn.Name = "stimeDataGridViewTextBoxColumn";
+            this.stimeDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // etimeDataGridViewTextBoxColumn
+            // 
+            this.etimeDataGridViewTextBoxColumn.DataPropertyName = "Etime";
+            this.etimeDataGridViewTextBoxColumn.HeaderText = "Thời Gian Kết Thúc";
+            this.etimeDataGridViewTextBoxColumn.Name = "etimeDataGridViewTextBoxColumn";
+            this.etimeDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // chiTietSuDungBindingSource
+            // 
+            this.chiTietSuDungBindingSource.DataMember = "ChiTietSuDung";
+            this.chiTietSuDungBindingSource.DataSource = this.doDuyDat_QLQuanGame_17DataSet;
+            // 
+            // doDuyDat_QLQuanGame_17DataSet
+            // 
+            this.doDuyDat_QLQuanGame_17DataSet.DataSetName = "DoDuyDat_QLQuanGame_17DataSet";
+            this.doDuyDat_QLQuanGame_17DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label6
             // 
@@ -255,51 +300,6 @@
             this.txtMaCTSD.Size = new System.Drawing.Size(121, 20);
             this.txtMaCTSD.TabIndex = 42;
             // 
-            // maCTSDDataGridViewTextBoxColumn
-            // 
-            this.maCTSDDataGridViewTextBoxColumn.DataPropertyName = "MaCTSD";
-            this.maCTSDDataGridViewTextBoxColumn.HeaderText = "Mã CTSD";
-            this.maCTSDDataGridViewTextBoxColumn.Name = "maCTSDDataGridViewTextBoxColumn";
-            this.maCTSDDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // iDPCDataGridViewTextBoxColumn
-            // 
-            this.iDPCDataGridViewTextBoxColumn.DataPropertyName = "ID_PC";
-            this.iDPCDataGridViewTextBoxColumn.HeaderText = "Mã Máy";
-            this.iDPCDataGridViewTextBoxColumn.Name = "iDPCDataGridViewTextBoxColumn";
-            this.iDPCDataGridViewTextBoxColumn.Width = 250;
-            // 
-            // iDUserDataGridViewTextBoxColumn
-            // 
-            this.iDUserDataGridViewTextBoxColumn.DataPropertyName = "ID_User";
-            this.iDUserDataGridViewTextBoxColumn.HeaderText = "Tài Khoản";
-            this.iDUserDataGridViewTextBoxColumn.Name = "iDUserDataGridViewTextBoxColumn";
-            this.iDUserDataGridViewTextBoxColumn.Width = 250;
-            // 
-            // stimeDataGridViewTextBoxColumn
-            // 
-            this.stimeDataGridViewTextBoxColumn.DataPropertyName = "Stime";
-            this.stimeDataGridViewTextBoxColumn.HeaderText = "Thời Gian Bắt Đầu";
-            this.stimeDataGridViewTextBoxColumn.Name = "stimeDataGridViewTextBoxColumn";
-            this.stimeDataGridViewTextBoxColumn.Width = 250;
-            // 
-            // etimeDataGridViewTextBoxColumn
-            // 
-            this.etimeDataGridViewTextBoxColumn.DataPropertyName = "Etime";
-            this.etimeDataGridViewTextBoxColumn.HeaderText = "Thời Gian Kết Thúc";
-            this.etimeDataGridViewTextBoxColumn.Name = "etimeDataGridViewTextBoxColumn";
-            this.etimeDataGridViewTextBoxColumn.Width = 250;
-            // 
-            // chiTietSuDungBindingSource
-            // 
-            this.chiTietSuDungBindingSource.DataMember = "ChiTietSuDung";
-            this.chiTietSuDungBindingSource.DataSource = this.doDuyDat_QLQuanGame_17DataSet;
-            // 
-            // doDuyDat_QLQuanGame_17DataSet
-            // 
-            this.doDuyDat_QLQuanGame_17DataSet.DataSetName = "DoDuyDat_QLQuanGame_17DataSet";
-            this.doDuyDat_QLQuanGame_17DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // chiTietSuDungTableAdapter
             // 
             this.chiTietSuDungTableAdapter.ClearBeforeFill = true;
@@ -337,6 +337,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEnd);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PCService";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Thiết Bị";

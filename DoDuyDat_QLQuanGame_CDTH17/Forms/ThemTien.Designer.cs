@@ -147,6 +147,7 @@
             this.Controls.Add(this.btnNaptien);
             this.Controls.Add(this.txtPMN);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ThemTien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Tiền";

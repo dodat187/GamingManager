@@ -12,11 +12,11 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Libraries
         {
             if (lastID == "")
             {
-                return prefixID + "001";
+                return prefixID + "01";
             }
             int nextID = int.Parse(lastID.Remove(0, prefixID.Length)) + 1;
             int lengthNumberID = lastID.Length - prefixID.Length;
-            string zeroNumber = "00";
+            string zeroNumber = "";
 
             for (int i = 1; i <= lengthNumberID; i++)
             {
@@ -24,7 +24,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Libraries
                 {
                     for (int j = 1; j <= lengthNumberID - i; j++)
                     {
-                        zeroNumber += "";
+                        zeroNumber += "0";
                     }
                     return prefixID + zeroNumber + nextID.ToString();
                 }

@@ -38,6 +38,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvDichVu = new System.Windows.Forms.DataGridView();
+            this.maDVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenDVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dichVuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.doDuyDat_QLQuanGame_17DataSet = new DoDuyDat_QLQuanGame_CDTH17.DoDuyDat_QLQuanGame_17DataSet();
             this.btnThoat = new System.Windows.Forms.Button();
@@ -47,9 +50,6 @@
             this.dichVuTableAdapter = new DoDuyDat_QLQuanGame_CDTH17.DoDuyDat_QLQuanGame_17DataSetTableAdapters.DichVuTableAdapter();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
-            this.maDVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenDVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDichVu)).BeginInit();
@@ -148,6 +148,27 @@
             this.dgvDichVu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDichVu_CellClick);
             this.dgvDichVu.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDichVu_CellDoubleClick);
             // 
+            // maDVDataGridViewTextBoxColumn
+            // 
+            this.maDVDataGridViewTextBoxColumn.DataPropertyName = "MaDV";
+            this.maDVDataGridViewTextBoxColumn.HeaderText = "Mã Dịch Vụ";
+            this.maDVDataGridViewTextBoxColumn.Name = "maDVDataGridViewTextBoxColumn";
+            this.maDVDataGridViewTextBoxColumn.Width = 350;
+            // 
+            // tenDVDataGridViewTextBoxColumn
+            // 
+            this.tenDVDataGridViewTextBoxColumn.DataPropertyName = "TenDV";
+            this.tenDVDataGridViewTextBoxColumn.HeaderText = "Tên Dịch Vụ";
+            this.tenDVDataGridViewTextBoxColumn.Name = "tenDVDataGridViewTextBoxColumn";
+            this.tenDVDataGridViewTextBoxColumn.Width = 350;
+            // 
+            // donGiaDataGridViewTextBoxColumn
+            // 
+            this.donGiaDataGridViewTextBoxColumn.DataPropertyName = "DonGia";
+            this.donGiaDataGridViewTextBoxColumn.HeaderText = "Đơn Giá";
+            this.donGiaDataGridViewTextBoxColumn.Name = "donGiaDataGridViewTextBoxColumn";
+            this.donGiaDataGridViewTextBoxColumn.Width = 350;
+            // 
             // dichVuBindingSource
             // 
             this.dichVuBindingSource.DataMember = "DichVu";
@@ -227,27 +248,6 @@
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // maDVDataGridViewTextBoxColumn
-            // 
-            this.maDVDataGridViewTextBoxColumn.DataPropertyName = "MaDV";
-            this.maDVDataGridViewTextBoxColumn.HeaderText = "Mã Dịch Vụ";
-            this.maDVDataGridViewTextBoxColumn.Name = "maDVDataGridViewTextBoxColumn";
-            this.maDVDataGridViewTextBoxColumn.Width = 350;
-            // 
-            // tenDVDataGridViewTextBoxColumn
-            // 
-            this.tenDVDataGridViewTextBoxColumn.DataPropertyName = "TenDV";
-            this.tenDVDataGridViewTextBoxColumn.HeaderText = "Tên Dịch Vụ";
-            this.tenDVDataGridViewTextBoxColumn.Name = "tenDVDataGridViewTextBoxColumn";
-            this.tenDVDataGridViewTextBoxColumn.Width = 350;
-            // 
-            // donGiaDataGridViewTextBoxColumn
-            // 
-            this.donGiaDataGridViewTextBoxColumn.DataPropertyName = "DonGia";
-            this.donGiaDataGridViewTextBoxColumn.HeaderText = "Đơn Giá";
-            this.donGiaDataGridViewTextBoxColumn.Name = "donGiaDataGridViewTextBoxColumn";
-            this.donGiaDataGridViewTextBoxColumn.Width = 350;
-            // 
             // MenuManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,6 +261,7 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MenuManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Thực Đơn";

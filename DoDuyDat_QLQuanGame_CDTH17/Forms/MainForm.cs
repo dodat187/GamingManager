@@ -5,10 +5,10 @@ using System.Windows.Forms;
 
 namespace DoDuyDat_QLQuanGame_CDTH17
 {
-    
+
     public partial class MainForm : Form
     {
-        
+
         public MainForm()
         {
             InitializeComponent();
@@ -83,7 +83,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
                 ActiveChildForm("MenuManager");
             }
         }
-        
+
 
         private void tsmAddUser_Click(object sender, EventArgs e)
         {
@@ -150,7 +150,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
 
         private void tsmExit_Click(object sender, EventArgs e)
         {
-            DialogResult h = MessageBox.Show("Bạn có muốn thoát chương trình không ? ","Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            DialogResult h = MessageBox.Show("Bạn có muốn thoát chương trình không ? ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
             if (h == DialogResult.Yes)
             {
                 Application.Exit();
@@ -161,7 +161,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
         {
             if (IdAccount.Login == true)
             {
-                txtID.Text = "Chào mừng quản lý: " + IdAccount.ID_User;
+                txtID.Text += "     " + IdAccount.ID_User;
             }
         }
 

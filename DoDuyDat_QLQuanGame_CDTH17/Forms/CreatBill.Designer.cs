@@ -48,11 +48,11 @@
             this.txtTenDA = new System.Windows.Forms.TextBox();
             this.txtCTHD = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btUpdate = new System.Windows.Forms.Button();
-            this.txtTongTien = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTHD)).BeginInit();
@@ -265,6 +265,23 @@
             this.label4.TabIndex = 21;
             this.label4.Text = "Số Lượng:";
             // 
+            // txtTongTien
+            // 
+            this.txtTongTien.Location = new System.Drawing.Point(400, 13);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(130, 20);
+            this.txtTongTien.TabIndex = 15;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(312, 16);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(74, 17);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Tổng Tiền:";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -296,23 +313,6 @@
             this.btUpdate.UseVisualStyleBackColor = true;
             this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
             // 
-            // txtTongTien
-            // 
-            this.txtTongTien.Location = new System.Drawing.Point(400, 13);
-            this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(130, 20);
-            this.txtTongTien.TabIndex = 15;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(312, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 17);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Tổng Tiền:";
-            // 
             // CreatBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,6 +324,7 @@
             this.Controls.Add(this.btnCreatHD);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreatBill";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tạo Hóa Đơn";

@@ -164,7 +164,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
                 btnSua.Enabled = false;
                 flagAction = "update";
             }
-            
+
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

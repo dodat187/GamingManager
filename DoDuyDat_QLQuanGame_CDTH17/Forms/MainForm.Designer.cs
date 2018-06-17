@@ -46,7 +46,6 @@
             this.tsmPhanQuyen = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +58,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Tahoma", 10F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmInfo,
             this.tsmManager,
@@ -66,16 +66,16 @@
             this.tsmFunction});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1150, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1150, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // tsmInfo
             // 
-            this.tsmInfo.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.tsmInfo.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tsmInfo.Name = "tsmInfo";
-            this.tsmInfo.Size = new System.Drawing.Size(133, 20);
+            this.tsmInfo.Size = new System.Drawing.Size(170, 23);
             this.tsmInfo.Text = "Thông Tin Cửa Hàng";
             this.tsmInfo.Click += new System.EventHandler(this.tsmInfo_Click);
             // 
@@ -85,9 +85,9 @@
             this.tsmManagerAccount,
             this.tsmPCService,
             this.tsmPCManager});
-            this.tsmManager.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.tsmManager.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tsmManager.Name = "tsmManager";
-            this.tsmManager.Size = new System.Drawing.Size(64, 20);
+            this.tsmManager.Size = new System.Drawing.Size(80, 23);
             this.tsmManager.Text = "Quản Lý";
             // 
             // tsmManagerAccount
@@ -97,42 +97,42 @@
             this.tsmChangePassword,
             this.tsmAddMoney});
             this.tsmManagerAccount.Name = "tsmManagerAccount";
-            this.tsmManagerAccount.Size = new System.Drawing.Size(188, 22);
+            this.tsmManagerAccount.Size = new System.Drawing.Size(228, 24);
             this.tsmManagerAccount.Text = "Quản Lý Tài Khoản";
             this.tsmManagerAccount.Click += new System.EventHandler(this.tsmManagerAccount_Click_1);
             // 
             // tsmAddUser
             // 
             this.tsmAddUser.Name = "tsmAddUser";
-            this.tsmAddUser.Size = new System.Drawing.Size(153, 22);
+            this.tsmAddUser.Size = new System.Drawing.Size(181, 24);
             this.tsmAddUser.Text = "Tạo Tài Khoản";
             this.tsmAddUser.Click += new System.EventHandler(this.tsmAddUser_Click);
             // 
             // tsmChangePassword
             // 
             this.tsmChangePassword.Name = "tsmChangePassword";
-            this.tsmChangePassword.Size = new System.Drawing.Size(153, 22);
+            this.tsmChangePassword.Size = new System.Drawing.Size(181, 24);
             this.tsmChangePassword.Text = "Đổi Mật Khẩu";
             this.tsmChangePassword.Click += new System.EventHandler(this.tsmChangePassword_Click);
             // 
             // tsmAddMoney
             // 
             this.tsmAddMoney.Name = "tsmAddMoney";
-            this.tsmAddMoney.Size = new System.Drawing.Size(153, 22);
+            this.tsmAddMoney.Size = new System.Drawing.Size(181, 24);
             this.tsmAddMoney.Text = "Nạp Tiền";
             this.tsmAddMoney.Click += new System.EventHandler(this.tsmAddMoney_Click);
             // 
             // tsmPCService
             // 
             this.tsmPCService.Name = "tsmPCService";
-            this.tsmPCService.Size = new System.Drawing.Size(188, 22);
+            this.tsmPCService.Size = new System.Drawing.Size(228, 24);
             this.tsmPCService.Text = "Quản Lý Người Dùng";
             this.tsmPCService.Click += new System.EventHandler(this.tsmPCService_Click);
             // 
             // tsmPCManager
             // 
             this.tsmPCManager.Name = "tsmPCManager";
-            this.tsmPCManager.Size = new System.Drawing.Size(188, 22);
+            this.tsmPCManager.Size = new System.Drawing.Size(228, 24);
             this.tsmPCManager.Text = "Quản Lý Thiết Bị";
             this.tsmPCManager.Click += new System.EventHandler(this.tsmPCManager_Click);
             // 
@@ -142,29 +142,29 @@
             this.tsmMenuManager,
             this.tsmBillManager,
             this.tsmCreatBill});
-            this.tsmService.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.tsmService.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tsmService.Name = "tsmService";
-            this.tsmService.Size = new System.Drawing.Size(61, 20);
+            this.tsmService.Size = new System.Drawing.Size(76, 23);
             this.tsmService.Text = "Dịch Vụ";
             // 
             // tsmMenuManager
             // 
             this.tsmMenuManager.Name = "tsmMenuManager";
-            this.tsmMenuManager.Size = new System.Drawing.Size(178, 22);
+            this.tsmMenuManager.Size = new System.Drawing.Size(212, 24);
             this.tsmMenuManager.Text = "Quản Lý Thực Đơn";
             this.tsmMenuManager.Click += new System.EventHandler(this.tsmMenuManager_Click);
             // 
             // tsmBillManager
             // 
             this.tsmBillManager.Name = "tsmBillManager";
-            this.tsmBillManager.Size = new System.Drawing.Size(178, 22);
+            this.tsmBillManager.Size = new System.Drawing.Size(212, 24);
             this.tsmBillManager.Text = "Quản Lý Hóa Đơn";
             this.tsmBillManager.Click += new System.EventHandler(this.tsmBillManager_Click);
             // 
             // tsmCreatBill
             // 
             this.tsmCreatBill.Name = "tsmCreatBill";
-            this.tsmCreatBill.Size = new System.Drawing.Size(178, 22);
+            this.tsmCreatBill.Size = new System.Drawing.Size(212, 24);
             this.tsmCreatBill.Text = "Tạo Hóa Đơn";
             this.tsmCreatBill.Click += new System.EventHandler(this.tsmCreatBill_Click);
             // 
@@ -174,47 +174,41 @@
             this.tsmPhanQuyen,
             this.tsmLogout,
             this.tsmExit});
-            this.tsmFunction.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.tsmFunction.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tsmFunction.Name = "tsmFunction";
-            this.tsmFunction.Size = new System.Drawing.Size(79, 20);
+            this.tsmFunction.Size = new System.Drawing.Size(99, 23);
             this.tsmFunction.Text = "Chức Năng";
             // 
             // tsmPhanQuyen
             // 
             this.tsmPhanQuyen.Name = "tsmPhanQuyen";
-            this.tsmPhanQuyen.Size = new System.Drawing.Size(141, 22);
+            this.tsmPhanQuyen.Size = new System.Drawing.Size(164, 24);
             this.tsmPhanQuyen.Text = "Phân Quyền";
             this.tsmPhanQuyen.Click += new System.EventHandler(this.tsmPhanQuyen_Click);
             // 
             // tsmLogout
             // 
             this.tsmLogout.Name = "tsmLogout";
-            this.tsmLogout.Size = new System.Drawing.Size(141, 22);
+            this.tsmLogout.Size = new System.Drawing.Size(164, 24);
             this.tsmLogout.Text = "Đăng Xuất";
             this.tsmLogout.Click += new System.EventHandler(this.tsmLogout_Click);
             // 
             // tsmExit
             // 
             this.tsmExit.Name = "tsmExit";
-            this.tsmExit.Size = new System.Drawing.Size(141, 22);
+            this.tsmExit.Size = new System.Drawing.Size(164, 24);
             this.tsmExit.Text = "Thoát";
             this.tsmExit.Click += new System.EventHandler(this.tsmExit_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(471, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 2;
             // 
             // txtID
             // 
             this.txtID.AutoSize = true;
-            this.txtID.Location = new System.Drawing.Point(608, 9);
+            this.txtID.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Location = new System.Drawing.Point(892, 2);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(0, 13);
+            this.txtID.Size = new System.Drawing.Size(95, 23);
             this.txtID.TabIndex = 3;
+            this.txtID.Text = "XIN CHÀO";
             // 
             // MainForm
             // 
@@ -223,7 +217,6 @@
             this.BackgroundImage = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources._28822594_1869285000030337_1040742205_o;
             this.ClientSize = new System.Drawing.Size(1150, 702);
             this.Controls.Add(this.txtID);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IsMdiContainer = true;
@@ -255,7 +248,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmAddUser;
         private System.Windows.Forms.ToolStripMenuItem tsmChangePassword;
         private System.Windows.Forms.ToolStripMenuItem tsmAddMoney;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label txtID;
         private System.Windows.Forms.ToolStripMenuItem tsmPhanQuyen;
         private System.Windows.Forms.ToolStripMenuItem tsmCreatBill;

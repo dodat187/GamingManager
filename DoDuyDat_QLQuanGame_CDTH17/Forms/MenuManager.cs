@@ -52,7 +52,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
             btnXoa.Enabled = false;
             btnReset.Enabled = true;
             btnThoat.Enabled = true;
-            
+
         }
 
         void unlockControl()
@@ -208,7 +208,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
             lockControl();
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
-            
+
         }
     }
 }

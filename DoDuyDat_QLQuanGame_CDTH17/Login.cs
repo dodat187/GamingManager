@@ -23,7 +23,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
             }
             catch (Exception)
             {
-                MessageBox.Show("Không thể kết nối tới CSDL", "Lỗi", MessageBoxButtons.OK );
+                MessageBox.Show("Không thể kết nối tới CSDL", "Lỗi", MessageBoxButtons.OK);
             }
         }
         private void disconnect()
@@ -44,6 +44,8 @@ namespace DoDuyDat_QLQuanGame_CDTH17
         {
             connect();
             this.AcceptButton = btnLogin;
+            txtPhanQuyen.Enabled = false;
+            txtPhanQuyen.Text = "Admin";
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -70,48 +72,83 @@ namespace DoDuyDat_QLQuanGame_CDTH17
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string _iduser = txtUser.Text;
-            string _idpass = txtPassword.Text;
-            string _idroles = "Admin";
 
-            var user = db.NguoiDungs.Find(_iduser);
-            var userroles = db.QuanTris.Find(_iduser);
-            var roles = db.QuanTris.Find(_idroles);
-
-            if (user != null && userroles != null)
+            SqlCommand command = new SqlCommand();
+            command.Connection = con;
+            command.CommandType = CommandType.Text;
+            command.CommandText = @"Select NguoiDung.ID_User, ID_Password, PhanQuyen From NguoiDung, QuanTri where NguoiDung.ID_User=QuanTri.ID_User and (NguoiDung.ID_User = @iduser) and (NguoiDung.ID_Password = @idpass) and (QuanTri.PhanQuyen = @phanquyen)";
+            command.Parameters.Add("@iduser", SqlDbType.NVarChar, 20).Value = txtUser.Text;
+            command.Parameters.Add("@idpass", SqlDbType.NVarChar, 20).Value = txtPassword.Text;
+            command.Parameters.Add("@phanquyen", SqlDbType.NVarChar, 20).Value = txtPhanQuyen.Text;
+            da.SelectCommand = command;
+            da.Fill(dt);
+            if (dt.Rows.Count > 0)
             {
-                if (user.ID_Password == _idpass && roles.PhanQuyen == "Admin")
-                {
-                    MainForm frmMain = new MainForm();
-
-                    IdAccount.ID_User = _iduser;
-                    IdAccount.ID_Pass = _idpass;
-
-                    IdAccount.Login = true;
-                    MessageBox.Show("Đăng nhập thành công");
-                    frmMain.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Sai mật khẩu ! Vui lòng thử lại");
-                    reset();
-                }
+                MainForm frmMain = new MainForm();
+                MessageBox.Show("Đăng nhập thành công");
+                IdAccount.ID_User = txtUser.Text;
+                IdAccount.ID_Pass = txtPassword.Text;
+                IdAccount.Login = true;
+                frmMain.Show();
+                this.Hide();
             }
             else
             {
-                if (txtUser.Text == "" && txtPassword.Text == "")
+                if (this.txtUser.TextLength == 0 || this.txtPassword.TextLength == 0)
                 {
                     MessageBox.Show("Tài khoản và mật khẩu không được bỏ trống", "Thông Báo");
                     reset();
                 }
                 else
                 {
-                    MessageBox.Show("Tài khoản này không được phép truy cập Quản Trị !!! \n Vui lòng thử lại hoặc liên hệ Quản Lý Cửa Hàng !!!" , "Thông Báo");
+                    MessageBox.Show("Tài khoản và mật khẩu không đúng", "Thông Báo");
                     reset();
                 }
-                
             }
+            //string _iduser = txtUser.Text;
+            //string _idpass = txtPassword.Text;
+            //string _idroles = "Admin";
+
+            //var user = db.NguoiDungs.Find(_iduser);
+            //var userroles = db.QuanTris.Find(_iduser);
+            //var roles = db.QuanTris.Find(_idroles);
+
+            //if (user != null && userroles != null)
+            //{
+            //    if (user.ID_Password == _idpass && roles.PhanQuyen == "Admin")
+            //    {
+
+
+            //        IdAccount.ID_User = _iduser;
+            //        IdAccount.ID_Pass = _idpass;
+
+            //        IdAccount.Login = true;
+            //        MainForm frmMain = new MainForm();
+            //        MessageBox.Show("Đăng nhập thành công");
+            //        frmMain.Show();
+            //        this.Hide();
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Sai mật khẩu ! Vui lòng thử lại");
+            //        reset();
+            //    }
+            //}
+            //else
+            //{
+            //    if (txtUser.Text == "" && txtPassword.Text == "")
+            //    {
+            //        MessageBox.Show("Tài khoản và mật khẩu không được bỏ trống", "Thông Báo");
+            //        reset();
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Tài khoản này không được phép truy cập Quản Trị !!! \n Vui lòng thử lại hoặc liên hệ Quản Lý Cửa Hàng !!!" , "Thông Báo");
+            //        reset();
+            //    }
+
+            //}
         }
+
     }
 }

@@ -155,6 +155,7 @@
             this.Controls.Add(this.btnInHD);
             this.Controls.Add(this.btnTimkiem);
             this.Controls.Add(this.cbbMaHD);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BillManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Hóa Đơn";

@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvNguoiDung = new System.Windows.Forms.DataGridView();
+            this.iDUserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDMoneyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nguoiDungBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.doDuyDat_QLQuanGame_17DataSet = new DoDuyDat_QLQuanGame_CDTH17.DoDuyDat_QLQuanGame_17DataSet();
             this.btnTaotk = new System.Windows.Forms.Button();
@@ -47,9 +50,6 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.txtMatkhau = new System.Windows.Forms.TextBox();
             this.txtSotien = new System.Windows.Forms.TextBox();
-            this.iDUserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDMoneyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNguoiDung)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nguoiDungBindingSource)).BeginInit();
@@ -81,6 +81,27 @@
             this.dgvNguoiDung.Size = new System.Drawing.Size(744, 569);
             this.dgvNguoiDung.TabIndex = 0;
             this.dgvNguoiDung.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNguoiDung_CellDoubleClick);
+            // 
+            // iDUserDataGridViewTextBoxColumn
+            // 
+            this.iDUserDataGridViewTextBoxColumn.DataPropertyName = "ID_User";
+            this.iDUserDataGridViewTextBoxColumn.HeaderText = "Tài Khoản";
+            this.iDUserDataGridViewTextBoxColumn.Name = "iDUserDataGridViewTextBoxColumn";
+            this.iDUserDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // ID_Password
+            // 
+            this.ID_Password.DataPropertyName = "ID_Password";
+            this.ID_Password.HeaderText = "Mật Khẩu";
+            this.ID_Password.Name = "ID_Password";
+            this.ID_Password.Width = 250;
+            // 
+            // iDMoneyDataGridViewTextBoxColumn
+            // 
+            this.iDMoneyDataGridViewTextBoxColumn.DataPropertyName = "ID_Money";
+            this.iDMoneyDataGridViewTextBoxColumn.HeaderText = "Tiền";
+            this.iDMoneyDataGridViewTextBoxColumn.Name = "iDMoneyDataGridViewTextBoxColumn";
+            this.iDMoneyDataGridViewTextBoxColumn.Width = 250;
             // 
             // nguoiDungBindingSource
             // 
@@ -224,27 +245,6 @@
             this.txtSotien.Size = new System.Drawing.Size(215, 20);
             this.txtSotien.TabIndex = 15;
             // 
-            // iDUserDataGridViewTextBoxColumn
-            // 
-            this.iDUserDataGridViewTextBoxColumn.DataPropertyName = "ID_User";
-            this.iDUserDataGridViewTextBoxColumn.HeaderText = "Tài Khoản";
-            this.iDUserDataGridViewTextBoxColumn.Name = "iDUserDataGridViewTextBoxColumn";
-            this.iDUserDataGridViewTextBoxColumn.Width = 250;
-            // 
-            // ID_Password
-            // 
-            this.ID_Password.DataPropertyName = "ID_Password";
-            this.ID_Password.HeaderText = "Mật Khẩu";
-            this.ID_Password.Name = "ID_Password";
-            this.ID_Password.Width = 250;
-            // 
-            // iDMoneyDataGridViewTextBoxColumn
-            // 
-            this.iDMoneyDataGridViewTextBoxColumn.DataPropertyName = "ID_Money";
-            this.iDMoneyDataGridViewTextBoxColumn.HeaderText = "Tiền";
-            this.iDMoneyDataGridViewTextBoxColumn.Name = "iDMoneyDataGridViewTextBoxColumn";
-            this.iDMoneyDataGridViewTextBoxColumn.Width = 250;
-            // 
             // UserManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,6 +264,7 @@
             this.Controls.Add(this.btnXoatk);
             this.Controls.Add(this.btnTaotk);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UserManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Người Dùng";

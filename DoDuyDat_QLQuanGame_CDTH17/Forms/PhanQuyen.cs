@@ -27,7 +27,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
             this.quanTriTableAdapter.Fill(this.doDuyDat_QLQuanGame_17DataSet.QuanTri);
             // TODO: This line of code loads data into the 'doDuyDat_QLQuanGame_17DataSet.NguoiDung' table. You can move, or remove it, as needed.
             this.nguoiDungTableAdapter.Fill(this.doDuyDat_QLQuanGame_17DataSet.NguoiDung);
-            
+
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

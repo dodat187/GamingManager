@@ -71,11 +71,12 @@ namespace DoDuyDat_QLQuanGame_CDTH17
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (txtTaikhoan.Text == "" || txtMatkhau.Text == "" )
+            if (txtTaikhoan.Text == "" || txtMatkhau.Text == "")
             {
                 MessageBox.Show("Các trường không được để trống !", "Thông Báo");
             }
-            else { 
+            else
+            {
                 if (flagAction == "add")
                 {
                     NguoiDung nd = new NguoiDung();
@@ -153,7 +154,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
             del1(this.txtTaikhoan);
             delPassData del2 = new delPassData(frmThemTien.funData2);
             del2(this.txtSotien);
-            frmThemTien.Show();  
+            frmThemTien.Show();
         }
 
         private void btnXoatk_Click(object sender, EventArgs e)
@@ -179,7 +180,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
         {
             txtTaikhoan.Text = "";
             txtMatkhau.Text = "";
-            txtSotien.Text = "";           
+            txtSotien.Text = "";
             lockControl();
             btnLuu.Hide();
             btnTaotk.Show();

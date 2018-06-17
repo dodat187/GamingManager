@@ -15,7 +15,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
 {
     public partial class PCService : Form
     {
-        
+
         DoDuyDat_QLQuanGame_17Entities db = new DoDuyDat_QLQuanGame_17Entities();
         private ChiTietSuDung currentCTSD;
         public PCService()
@@ -87,7 +87,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
             txtTien.Enabled = false;
 
         }
-        
+
         void resetTime()
         {
             txtStart.Text = "";
@@ -143,7 +143,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
             btnEnd.Enabled = false;
             btnTinhtien.Enabled = true;
         }
-        
+
         private void btnTinhtien_Click(object sender, EventArgs e)
         {
             StringBuilder strBuilder = new StringBuilder(1000);

@@ -233,12 +233,6 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MenuService.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MenuService.Designer.cs">
-      <DependentUpon>MenuService.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\PhanQuyen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,9 +286,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MenuService.resx">
-      <DependentUpon>MenuService.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PhanQuyen.resx">
       <DependentUpon>PhanQuyen.cs</DependentUpon>
@@ -423,6 +414,10 @@
       <DependentUpon>QLQuanGameModel.edmx</DependentUpon>
       <LastGenOutput>QLQuanGameModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\backgroundlogin.jpg" />
+    <None Include="Resources\admin.png" />
+    <None Include="Resources\password.png" />
+    <None Include="Resources\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

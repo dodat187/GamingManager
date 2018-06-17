@@ -146,6 +146,7 @@
             this.Controls.Add(this.cbbUser);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PhanQuyen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phân Quyền Quản Trị";

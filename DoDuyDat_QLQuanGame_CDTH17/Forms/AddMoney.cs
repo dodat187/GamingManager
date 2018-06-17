@@ -39,7 +39,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
             cbbUS.DataSource = dt;
             cbbUS.DisplayMember = "ID_User";
             cbbUS.ValueMember = "ID_Money";
-            
+
 
         }
 
@@ -63,9 +63,9 @@ namespace DoDuyDat_QLQuanGame_CDTH17
                 double tong = (pm + am);
                 txtTMN.Text = tong.ToString();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.ToString());
+
             }
         }
 
@@ -107,7 +107,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
 
         private void txtTMN_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

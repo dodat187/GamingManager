@@ -78,22 +78,20 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
             txtAMN.Enabled = true;
             txtTMN.Enabled = false;
             txtAMN.Text = "0";
-            
-
         }
 
         private new void Update()
         {
             try
             {
-                int pm = Convert.ToInt32(txtPMN.Text);
+                double pm = Convert.ToDouble(txtPMN.Text);
                 int am = Convert.ToInt32(txtAMN.Text);
-                int tong = (pm + am);
+                double tong = (pm + am);
                 txtTMN.Text = tong.ToString();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.ToString());
+
             }
         }
 
