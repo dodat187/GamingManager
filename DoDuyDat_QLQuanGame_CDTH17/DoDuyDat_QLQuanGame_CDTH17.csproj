@@ -212,6 +212,12 @@
     <Compile Include="Forms\PCService.Designer.cs">
       <DependentUpon>PCService.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PrintBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PrintBill.Designer.cs">
+      <DependentUpon>PrintBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ThemTien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PCService.resx">
       <DependentUpon>PCService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PrintBill.resx">
+      <DependentUpon>PrintBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ThemTien.resx">
       <DependentUpon>ThemTien.cs</DependentUpon>

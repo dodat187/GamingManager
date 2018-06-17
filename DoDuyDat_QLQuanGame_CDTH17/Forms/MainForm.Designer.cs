@@ -216,7 +216,7 @@
             // 
             this.txtID.AutoSize = true;
             this.txtID.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(995, 2);
+            this.txtID.Location = new System.Drawing.Point(872, 2);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(95, 23);
             this.txtID.TabIndex = 3;

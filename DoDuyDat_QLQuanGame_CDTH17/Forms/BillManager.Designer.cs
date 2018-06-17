@@ -118,13 +118,14 @@
             this.dgvHD.Name = "dgvHD";
             this.dgvHD.Size = new System.Drawing.Size(894, 216);
             this.dgvHD.TabIndex = 9;
+            this.dgvHD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHD_CellContentClick);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.crv);
             this.groupBox1.Location = new System.Drawing.Point(4, 226);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1121, 363);
+            this.groupBox1.Size = new System.Drawing.Size(1121, 439);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "In Hóa Đơn";
@@ -137,7 +138,7 @@
             this.crv.DisplayToolbar = false;
             this.crv.Location = new System.Drawing.Point(3, 16);
             this.crv.Name = "crv";
-            this.crv.Size = new System.Drawing.Size(1115, 344);
+            this.crv.Size = new System.Drawing.Size(1115, 422);
             this.crv.TabIndex = 0;
             this.crv.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
@@ -145,7 +146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1130, 590);
+            this.ClientSize = new System.Drawing.Size(1130, 666);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvHD);
             this.Controls.Add(this.txtTongtien);

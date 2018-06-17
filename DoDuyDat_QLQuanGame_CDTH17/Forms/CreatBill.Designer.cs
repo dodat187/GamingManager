@@ -53,6 +53,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btUpdate = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTHD)).BeginInit();
@@ -95,11 +96,11 @@
             // btnHuy
             // 
             this.btnHuy.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(322, 503);
+            this.btnHuy.Location = new System.Drawing.Point(295, 503);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(108, 47);
+            this.btnHuy.Size = new System.Drawing.Size(135, 47);
             this.btnHuy.TabIndex = 9;
-            this.btnHuy.Text = "Hủy";
+            this.btnHuy.Text = "Hủy Chọn Tất Cả";
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
@@ -126,9 +127,9 @@
             // btUnpick
             // 
             this.btUnpick.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btUnpick.Location = new System.Drawing.Point(168, 503);
+            this.btUnpick.Location = new System.Drawing.Point(115, 503);
             this.btUnpick.Name = "btUnpick";
-            this.btUnpick.Size = new System.Drawing.Size(108, 47);
+            this.btUnpick.Size = new System.Drawing.Size(95, 47);
             this.btUnpick.TabIndex = 7;
             this.btUnpick.Text = "Bỏ Chọn";
             this.btUnpick.UseVisualStyleBackColor = true;
@@ -139,7 +140,7 @@
             this.btPick.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPick.Location = new System.Drawing.Point(20, 503);
             this.btPick.Name = "btPick";
-            this.btPick.Size = new System.Drawing.Size(108, 47);
+            this.btPick.Size = new System.Drawing.Size(89, 47);
             this.btPick.TabIndex = 6;
             this.btPick.Text = "Chọn";
             this.btPick.UseVisualStyleBackColor = true;
@@ -159,11 +160,11 @@
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(1010, 531);
+            this.btnThoat.Location = new System.Drawing.Point(725, 531);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(108, 47);
             this.btnThoat.TabIndex = 8;
-            this.btnThoat.Text = "Thoát";
+            this.btnThoat.Text = "Hủy Thiết Lập";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -172,7 +173,7 @@
             this.groupBox2.Controls.Add(this.dgvCTHD);
             this.groupBox2.Location = new System.Drawing.Point(466, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(661, 297);
+            this.groupBox2.Size = new System.Drawing.Size(661, 333);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Hóa Đơn";
@@ -182,7 +183,7 @@
             this.dgvCTHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCTHD.Location = new System.Drawing.Point(6, 19);
             this.dgvCTHD.Name = "dgvCTHD";
-            this.dgvCTHD.Size = new System.Drawing.Size(649, 275);
+            this.dgvCTHD.Size = new System.Drawing.Size(649, 308);
             this.dgvCTHD.TabIndex = 0;
             this.dgvCTHD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTHD_CellContentClick);
             this.dgvCTHD.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTHD_CellDoubleClick);
@@ -211,9 +212,9 @@
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.btUpdate);
-            this.groupBox3.Location = new System.Drawing.Point(466, 315);
+            this.groupBox3.Location = new System.Drawing.Point(469, 341);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(554, 172);
+            this.groupBox3.Size = new System.Drawing.Size(652, 172);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
             // 
@@ -313,11 +314,23 @@
             this.btUpdate.UseVisualStyleBackColor = true;
             this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1010, 531);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 47);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Thoát";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // CreatBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1130, 590);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnThietlap);
             this.Controls.Add(this.groupBox2);
@@ -365,5 +378,6 @@
         private System.Windows.Forms.Button btUpdate;
         private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
     }
 }

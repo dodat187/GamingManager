@@ -48,6 +48,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
             loadCbUser();
             lockControl();
         }
+
         void lockControl()
         {
             txtPMN.Enabled = false;

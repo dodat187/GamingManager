@@ -1,4 +1,5 @@
 ﻿using DoDuyDat_QLQuanGame_CDTH17.Entities;
+using DoDuyDat_QLQuanGame_CDTH17.Forms;
 using DoDuyDat_QLQuanGame_CDTH17.Libraries;
 using System;
 using System.Collections.Generic;
@@ -63,6 +64,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
             string nextID = IdGenerate.genId(lastID, "HD");
             txtMaHD.Text = nextID;
         }
+        
 
         void loadListDV()
         {
@@ -159,12 +161,18 @@ namespace DoDuyDat_QLQuanGame_CDTH17
             cn.DDL("Delete from HoaDon where MaHD='" + txtMaHD.Text.ToString() + "'");
             this.Close();
         }
-
+        public delegate void delPassData(TextBox text);
         private void btnCreatHD_Click(object sender, EventArgs e)
         {
+
             cn.DDL("Update HoaDon set TongTien='" + Convert.ToInt32(txtTongTien.Text.Trim()) + "' where MaHD='" + txtMaHD.Text.ToString() + "'");
             MessageBox.Show("Ðặt món thành công, vui lòng chờ trong giây lát.");
-            this.Close();
+            //this.Close();
+            PrintBill frmPrint = new PrintBill();
+            delPassData del1 = new delPassData(frmPrint.funData1);
+            del1(this.txtMaHD);
+            frmPrint.Show();
+
         }
 
         private void dgvCTHD_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -176,6 +184,11 @@ namespace DoDuyDat_QLQuanGame_CDTH17
             txtTenDA.DataBindings.Add("Text", dgvCTHD.DataSource, "TenDV");
             txtSL.DataBindings.Add("Text", dgvCTHD.DataSource, "SoluongDV");
             txtMaHD2.Text = cn.XDL("select MaHD from HoaDon where MaHD='" + txtMaHD.Text.ToString() + "'").Rows[0][0].ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

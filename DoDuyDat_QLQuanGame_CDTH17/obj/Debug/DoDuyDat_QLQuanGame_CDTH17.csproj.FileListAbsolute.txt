@@ -137,3 +137,4 @@ C:\Users\doduy\Desktop\GamingManager\DoDuyDat_QLQuanGame_CDTH17\bin\Debug\Crysta
 C:\Users\doduy\Desktop\GamingManager\DoDuyDat_QLQuanGame_CDTH17\bin\Debug\stdole.dll
 C:\Users\doduy\Desktop\GamingManager\DoDuyDat_QLQuanGame_CDTH17\bin\Debug\EntityFramework.xml
 C:\Users\doduy\Desktop\GamingManager\DoDuyDat_QLQuanGame_CDTH17\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\doduy\Desktop\GamingManager\DoDuyDat_QLQuanGame_CDTH17\obj\Debug\DoDuyDat_QLQuanGame_CDTH17.Forms.PrintBill.resources

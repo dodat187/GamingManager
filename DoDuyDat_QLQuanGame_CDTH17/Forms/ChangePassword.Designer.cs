@@ -72,27 +72,27 @@
             // 
             this.txtTaikhoan.Location = new System.Drawing.Point(144, 21);
             this.txtTaikhoan.Name = "txtTaikhoan";
-            this.txtTaikhoan.Size = new System.Drawing.Size(237, 20);
+            this.txtTaikhoan.Size = new System.Drawing.Size(190, 20);
             this.txtTaikhoan.TabIndex = 3;
             // 
             // txtMatkhau
             // 
             this.txtMatkhau.Location = new System.Drawing.Point(144, 56);
             this.txtMatkhau.Name = "txtMatkhau";
-            this.txtMatkhau.Size = new System.Drawing.Size(237, 20);
+            this.txtMatkhau.Size = new System.Drawing.Size(190, 20);
             this.txtMatkhau.TabIndex = 4;
             // 
             // txtNhaplaiMK
             // 
             this.txtNhaplaiMK.Location = new System.Drawing.Point(144, 93);
             this.txtNhaplaiMK.Name = "txtNhaplaiMK";
-            this.txtNhaplaiMK.Size = new System.Drawing.Size(237, 20);
+            this.txtNhaplaiMK.Size = new System.Drawing.Size(190, 20);
             this.txtNhaplaiMK.TabIndex = 5;
             // 
             // btnDoimk
             // 
             this.btnDoimk.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoimk.Location = new System.Drawing.Point(41, 134);
+            this.btnDoimk.Location = new System.Drawing.Point(15, 134);
             this.btnDoimk.Name = "btnDoimk";
             this.btnDoimk.Size = new System.Drawing.Size(125, 45);
             this.btnDoimk.TabIndex = 6;
@@ -103,7 +103,7 @@
             // btnHuy
             // 
             this.btnHuy.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(282, 134);
+            this.btnHuy.Location = new System.Drawing.Point(235, 134);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(99, 45);
             this.btnHuy.TabIndex = 7;
@@ -115,7 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 184);
+            this.ClientSize = new System.Drawing.Size(351, 184);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnDoimk);
             this.Controls.Add(this.txtNhaplaiMK);

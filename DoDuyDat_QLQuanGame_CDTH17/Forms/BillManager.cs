@@ -98,5 +98,10 @@ namespace DoDuyDat_QLQuanGame_CDTH17
         {
             crv.PrintReport();
         }
+
+        private void dgvHD_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
