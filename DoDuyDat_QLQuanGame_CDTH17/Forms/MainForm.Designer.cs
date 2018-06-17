@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsmInfo = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,6 +67,7 @@
             this.tsmFunction});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.menuStrip1.Size = new System.Drawing.Size(1150, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -74,8 +76,9 @@
             // tsmInfo
             // 
             this.tsmInfo.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.tsmInfo.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.info;
             this.tsmInfo.Name = "tsmInfo";
-            this.tsmInfo.Size = new System.Drawing.Size(170, 23);
+            this.tsmInfo.Size = new System.Drawing.Size(186, 23);
             this.tsmInfo.Text = "Thông Tin Cửa Hàng";
             this.tsmInfo.Click += new System.EventHandler(this.tsmInfo_Click);
             // 
@@ -86,8 +89,9 @@
             this.tsmPCService,
             this.tsmPCManager});
             this.tsmManager.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.tsmManager.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.manager;
             this.tsmManager.Name = "tsmManager";
-            this.tsmManager.Size = new System.Drawing.Size(80, 23);
+            this.tsmManager.Size = new System.Drawing.Size(96, 23);
             this.tsmManager.Text = "Quản Lý";
             // 
             // tsmManagerAccount
@@ -96,6 +100,7 @@
             this.tsmAddUser,
             this.tsmChangePassword,
             this.tsmAddMoney});
+            this.tsmManagerAccount.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.user;
             this.tsmManagerAccount.Name = "tsmManagerAccount";
             this.tsmManagerAccount.Size = new System.Drawing.Size(228, 24);
             this.tsmManagerAccount.Text = "Quản Lý Tài Khoản";
@@ -124,6 +129,7 @@
             // 
             // tsmPCService
             // 
+            this.tsmPCService.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.pc_user;
             this.tsmPCService.Name = "tsmPCService";
             this.tsmPCService.Size = new System.Drawing.Size(228, 24);
             this.tsmPCService.Text = "Quản Lý Người Dùng";
@@ -131,6 +137,7 @@
             // 
             // tsmPCManager
             // 
+            this.tsmPCManager.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.pc;
             this.tsmPCManager.Name = "tsmPCManager";
             this.tsmPCManager.Size = new System.Drawing.Size(228, 24);
             this.tsmPCManager.Text = "Quản Lý Thiết Bị";
@@ -143,12 +150,14 @@
             this.tsmBillManager,
             this.tsmCreatBill});
             this.tsmService.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.tsmService.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.service;
             this.tsmService.Name = "tsmService";
-            this.tsmService.Size = new System.Drawing.Size(76, 23);
+            this.tsmService.Size = new System.Drawing.Size(92, 23);
             this.tsmService.Text = "Dịch Vụ";
             // 
             // tsmMenuManager
             // 
+            this.tsmMenuManager.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.menu;
             this.tsmMenuManager.Name = "tsmMenuManager";
             this.tsmMenuManager.Size = new System.Drawing.Size(212, 24);
             this.tsmMenuManager.Text = "Quản Lý Thực Đơn";
@@ -156,6 +165,7 @@
             // 
             // tsmBillManager
             // 
+            this.tsmBillManager.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.bill;
             this.tsmBillManager.Name = "tsmBillManager";
             this.tsmBillManager.Size = new System.Drawing.Size(212, 24);
             this.tsmBillManager.Text = "Quản Lý Hóa Đơn";
@@ -163,6 +173,7 @@
             // 
             // tsmCreatBill
             // 
+            this.tsmCreatBill.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.createbill;
             this.tsmCreatBill.Name = "tsmCreatBill";
             this.tsmCreatBill.Size = new System.Drawing.Size(212, 24);
             this.tsmCreatBill.Text = "Tạo Hóa Đơn";
@@ -175,8 +186,9 @@
             this.tsmLogout,
             this.tsmExit});
             this.tsmFunction.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.tsmFunction.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.function;
             this.tsmFunction.Name = "tsmFunction";
-            this.tsmFunction.Size = new System.Drawing.Size(99, 23);
+            this.tsmFunction.Size = new System.Drawing.Size(115, 23);
             this.tsmFunction.Text = "Chức Năng";
             // 
             // tsmPhanQuyen
@@ -204,7 +216,7 @@
             // 
             this.txtID.AutoSize = true;
             this.txtID.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(892, 2);
+            this.txtID.Location = new System.Drawing.Point(995, 2);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(95, 23);
             this.txtID.TabIndex = 3;
@@ -214,11 +226,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources._28822594_1869285000030337_1040742205_o;
+            this.BackgroundImage = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.backgroundlogin1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1150, 702);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
