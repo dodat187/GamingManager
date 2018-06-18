@@ -423,6 +423,21 @@
       <DependentUpon>QLQuanGameModel.edmx</DependentUpon>
       <LastGenOutput>QLQuanGameModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\update.png" />
+    <None Include="Resources\uncheckall.png" />
+    <None Include="Resources\uncheck.png" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\print.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\add1.png" />
+    <None Include="Resources\Login.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\admin1.png" />
     <None Include="Resources\backgroundlogin1.jpg" />
     <None Include="Resources\Logo1.jpg" />
     <None Include="Resources\Logo.jpg" />

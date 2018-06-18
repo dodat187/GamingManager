@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtPhanQuyen = new System.Windows.Forms.ComboBox();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtPhanQuyen = new System.Windows.Forms.TextBox();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.txtUser = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -47,10 +47,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtPhanQuyen);
             this.groupBox1.Controls.Add(this.pictureBox3);
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.txtPhanQuyen);
             this.groupBox1.Controls.Add(this.btnThoat);
             this.groupBox1.Controls.Add(this.btnReset);
             this.groupBox1.Controls.Add(this.txtPassword);
@@ -63,6 +63,45 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Đăng Nhập";
+            // 
+            // txtPhanQuyen
+            // 
+            this.txtPhanQuyen.FormattingEnabled = true;
+            this.txtPhanQuyen.Items.AddRange(new object[] {
+            "Admin",
+            "User"});
+            this.txtPhanQuyen.Location = new System.Drawing.Point(141, 214);
+            this.txtPhanQuyen.Name = "txtPhanQuyen";
+            this.txtPhanQuyen.Size = new System.Drawing.Size(141, 27);
+            this.txtPhanQuyen.TabIndex = 14;
+            // 
+            // btnReset
+            // 
+            this.btnReset.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.Location = new System.Drawing.Point(288, 214);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(55, 27);
+            this.btnReset.TabIndex = 5;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(141, 131);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(202, 27);
+            this.txtPassword.TabIndex = 7;
+            this.txtPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPassword_MouseClick);
+            // 
+            // txtUser
+            // 
+            this.txtUser.Location = new System.Drawing.Point(141, 44);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(202, 27);
+            this.txtUser.TabIndex = 6;
+            this.txtUser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtUser_MouseClick);
             // 
             // pictureBox3
             // 
@@ -94,60 +133,33 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
-            // txtPhanQuyen
-            // 
-            this.txtPhanQuyen.Location = new System.Drawing.Point(193, 214);
-            this.txtPhanQuyen.Name = "txtPhanQuyen";
-            this.txtPhanQuyen.Size = new System.Drawing.Size(76, 27);
-            this.txtPhanQuyen.TabIndex = 10;
-            // 
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(223, 307);
+            this.btnThoat.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.logout;
+            this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThoat.Location = new System.Drawing.Point(263, 286);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(120, 27);
+            this.btnThoat.Size = new System.Drawing.Size(87, 48);
             this.btnThoat.TabIndex = 6;
             this.btnThoat.Text = "Thoát";
+            this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
-            // btnReset
-            // 
-            this.btnReset.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(288, 214);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(55, 27);
-            this.btnReset.TabIndex = 5;
-            this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(193, 125);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(150, 27);
-            this.txtPassword.TabIndex = 7;
             // 
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(45, 307);
+            this.btnLogin.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.Login;
+            this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogin.Location = new System.Drawing.Point(36, 286);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(120, 27);
+            this.btnLogin.Size = new System.Drawing.Size(123, 48);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Đăng Nhập";
+            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // txtUser
-            // 
-            this.txtUser.Location = new System.Drawing.Point(193, 44);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(150, 27);
-            this.txtUser.TabIndex = 6;
             // 
             // Login
             // 
@@ -180,10 +192,10 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtPhanQuyen;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.ComboBox txtPhanQuyen;
     }
 }
 

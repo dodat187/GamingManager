@@ -84,7 +84,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
                     nd.ID_User = txtTaikhoan.Text;
                     nd.ID_Password = txtMatkhau.Text;
                     qt.ID_User = txtTaikhoan.Text;
-                    qt.PhanQuyen = "User";
+                    qt.PhanQuyen = "Guest";
                     System.Text.RegularExpressions.Regex re = new System.Text.RegularExpressions.Regex("[^0-9-]+");
                     if (txtSotien.Text.Length > 0)
                     {
@@ -209,6 +209,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
         private void btnReset_Click(object sender, EventArgs e)
         {
             reset();
+            loadDataGridView();
         }
 
     }

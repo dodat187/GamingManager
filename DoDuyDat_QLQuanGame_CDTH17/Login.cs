@@ -44,8 +44,9 @@ namespace DoDuyDat_QLQuanGame_CDTH17
         {
             connect();
             this.AcceptButton = btnLogin;
-            txtPhanQuyen.Enabled = false;
-            txtPhanQuyen.Text = "Admin";
+            txtUser.Text = "Nhập Tài Khoản";
+            txtPassword.Text = "******";
+            txtPhanQuyen.Text = "Phân quyền";
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -82,8 +83,9 @@ namespace DoDuyDat_QLQuanGame_CDTH17
             command.Parameters.Add("@phanquyen", SqlDbType.NVarChar, 20).Value = txtPhanQuyen.Text;
             da.SelectCommand = command;
             da.Fill(dt);
-            if (dt.Rows.Count > 0)
+            if (dt.Rows.Count > 0 && txtPhanQuyen.Text == "Admin")
             {
+
                 MainForm frmMain = new MainForm();
                 MessageBox.Show("Đăng nhập thành công");
                 IdAccount.ID_User = txtUser.Text;
@@ -94,16 +96,39 @@ namespace DoDuyDat_QLQuanGame_CDTH17
             }
             else
             {
-                if (this.txtUser.TextLength == 0 || this.txtPassword.TextLength == 0)
+                if (dt.Rows.Count > 0 && txtPhanQuyen.Text == "User")
                 {
-                    MessageBox.Show("Tài khoản và mật khẩu không được bỏ trống", "Thông Báo");
-                    reset();
+                    MainForm frmMain = new MainForm();
+                    MessageBox.Show("Đăng nhập thành công");
+                    IdAccount.ID_User = txtUser.Text;
+                    IdAccount.ID_Pass = txtPassword.Text;
+                    IdAccount.Login = false;
+                    frmMain.Show();
+                    this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("Tài khoản và mật khẩu không đúng", "Thông Báo");
-                    reset();
+                    if (this.txtUser.TextLength == 0 || this.txtPassword.TextLength == 0)
+                    {
+                        MessageBox.Show("Tài khoản và mật khẩu không được bỏ trống", "Thông Báo");
+                        reset();
+                    }
+                    else
+                    {
+                        if (txtPhanQuyen.Text != "Admin" || txtPhanQuyen.Text != "User")
+                        {
+                            MessageBox.Show("Tài khoản không đúng quyền hạn", "Thông Báo");
+                            reset();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Tài khoản mật khẩu không đúng. Vui lòng kiểm tra lại", "Thông Báo");
+                            reset();
+                        }
+                    }
                 }
+
+
             }
             //string _iduser = txtUser.Text;
             //string _idpass = txtPassword.Text;
@@ -150,5 +175,14 @@ namespace DoDuyDat_QLQuanGame_CDTH17
             //}
         }
 
+        private void txtUser_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtUser.Text = "";
+        }
+
+        private void txtPassword_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtPassword.Text = "";
+        }
     }
 }

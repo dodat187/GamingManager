@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserManager));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvNguoiDung = new System.Windows.Forms.DataGridView();
             this.iDUserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,7 +63,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(750, 589);
+            this.groupBox1.Size = new System.Drawing.Size(750, 665);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách Người Dùng";
@@ -78,7 +79,7 @@
             this.dgvNguoiDung.DataSource = this.nguoiDungBindingSource;
             this.dgvNguoiDung.Location = new System.Drawing.Point(3, 20);
             this.dgvNguoiDung.Name = "dgvNguoiDung";
-            this.dgvNguoiDung.Size = new System.Drawing.Size(744, 569);
+            this.dgvNguoiDung.Size = new System.Drawing.Size(744, 643);
             this.dgvNguoiDung.TabIndex = 0;
             this.dgvNguoiDung.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNguoiDung_CellDoubleClick);
             // 
@@ -115,45 +116,57 @@
             // 
             // btnTaotk
             // 
-            this.btnTaotk.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaotk.Location = new System.Drawing.Point(786, 230);
+            this.btnTaotk.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaotk.Image = ((System.Drawing.Image)(resources.GetObject("btnTaotk.Image")));
+            this.btnTaotk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTaotk.Location = new System.Drawing.Point(786, 208);
             this.btnTaotk.Name = "btnTaotk";
-            this.btnTaotk.Size = new System.Drawing.Size(132, 41);
+            this.btnTaotk.Size = new System.Drawing.Size(101, 41);
             this.btnTaotk.TabIndex = 1;
-            this.btnTaotk.Text = "Tạo Tài Khoản";
+            this.btnTaotk.Text = "Tạo";
+            this.btnTaotk.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTaotk.UseVisualStyleBackColor = true;
             this.btnTaotk.Click += new System.EventHandler(this.btnTaotk_Click);
             // 
             // btnXoatk
             // 
-            this.btnXoatk.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoatk.Location = new System.Drawing.Point(786, 326);
+            this.btnXoatk.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoatk.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.delete;
+            this.btnXoatk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoatk.Location = new System.Drawing.Point(786, 292);
             this.btnXoatk.Name = "btnXoatk";
-            this.btnXoatk.Size = new System.Drawing.Size(132, 41);
+            this.btnXoatk.Size = new System.Drawing.Size(101, 41);
             this.btnXoatk.TabIndex = 2;
-            this.btnXoatk.Text = "Xóa Tài Khoản";
+            this.btnXoatk.Text = "Xóa";
+            this.btnXoatk.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoatk.UseVisualStyleBackColor = true;
             this.btnXoatk.Click += new System.EventHandler(this.btnXoatk_Click);
             // 
             // btnNaptien
             // 
-            this.btnNaptien.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNaptien.Location = new System.Drawing.Point(953, 326);
+            this.btnNaptien.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNaptien.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.bill;
+            this.btnNaptien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNaptien.Location = new System.Drawing.Point(786, 456);
             this.btnNaptien.Name = "btnNaptien";
-            this.btnNaptien.Size = new System.Drawing.Size(132, 41);
+            this.btnNaptien.Size = new System.Drawing.Size(101, 41);
             this.btnNaptien.TabIndex = 3;
-            this.btnNaptien.Text = "Nạp Tiền";
+            this.btnNaptien.Text = "Nạp TK";
+            this.btnNaptien.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNaptien.UseVisualStyleBackColor = true;
             this.btnNaptien.Click += new System.EventHandler(this.btnNaptien_Click);
             // 
             // btnThoat
             // 
-            this.btnThoat.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(953, 438);
+            this.btnThoat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.exit;
+            this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThoat.Location = new System.Drawing.Point(984, 613);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(132, 41);
+            this.btnThoat.Size = new System.Drawing.Size(101, 41);
             this.btnThoat.TabIndex = 4;
             this.btnThoat.Text = "Thoát";
+            this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -161,7 +174,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(783, 70);
+            this.label1.Location = new System.Drawing.Point(783, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 17);
             this.label1.TabIndex = 5;
@@ -179,7 +192,7 @@
             // 
             // txtTaikhoan
             // 
-            this.txtTaikhoan.Location = new System.Drawing.Point(870, 68);
+            this.txtTaikhoan.Location = new System.Drawing.Point(870, 20);
             this.txtTaikhoan.Name = "txtTaikhoan";
             this.txtTaikhoan.Size = new System.Drawing.Size(215, 20);
             this.txtTaikhoan.TabIndex = 7;
@@ -190,12 +203,15 @@
             // 
             // btnDoimk
             // 
-            this.btnDoimk.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoimk.Location = new System.Drawing.Point(953, 230);
+            this.btnDoimk.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoimk.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.update;
+            this.btnDoimk.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDoimk.Location = new System.Drawing.Point(786, 373);
             this.btnDoimk.Name = "btnDoimk";
-            this.btnDoimk.Size = new System.Drawing.Size(132, 41);
+            this.btnDoimk.Size = new System.Drawing.Size(101, 41);
             this.btnDoimk.TabIndex = 9;
-            this.btnDoimk.Text = "Đổi Mật Khẩu";
+            this.btnDoimk.Text = "Đổi MK";
+            this.btnDoimk.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDoimk.UseVisualStyleBackColor = true;
             this.btnDoimk.Click += new System.EventHandler(this.btnDoimk_Click);
             // 
@@ -203,7 +219,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(783, 106);
+            this.label3.Location = new System.Drawing.Point(783, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 17);
             this.label3.TabIndex = 10;
@@ -211,29 +227,35 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(786, 230);
+            this.btnLuu.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
+            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLuu.Location = new System.Drawing.Point(786, 208);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(132, 41);
+            this.btnLuu.Size = new System.Drawing.Size(101, 41);
             this.btnLuu.TabIndex = 12;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnReset
             // 
-            this.btnReset.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(786, 438);
+            this.btnReset.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.refresh;
+            this.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReset.Location = new System.Drawing.Point(786, 536);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(132, 41);
+            this.btnReset.Size = new System.Drawing.Size(101, 41);
             this.btnReset.TabIndex = 13;
-            this.btnReset.Text = "Reset";
+            this.btnReset.Text = "Làm mới";
+            this.btnReset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // txtMatkhau
             // 
-            this.txtMatkhau.Location = new System.Drawing.Point(870, 105);
+            this.txtMatkhau.Location = new System.Drawing.Point(870, 76);
             this.txtMatkhau.Name = "txtMatkhau";
             this.txtMatkhau.Size = new System.Drawing.Size(215, 20);
             this.txtMatkhau.TabIndex = 14;
@@ -249,7 +271,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1130, 590);
+            this.ClientSize = new System.Drawing.Size(1130, 666);
             this.Controls.Add(this.txtSotien);
             this.Controls.Add(this.txtMatkhau);
             this.Controls.Add(this.btnReset);

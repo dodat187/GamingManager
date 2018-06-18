@@ -68,6 +68,63 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
             txtTenSP.Text = "";
             txtDonGia.Text = "";
         }
+        
+        void reset()
+        {
+            txtTenSP.Text = "";
+            txtDonGia.Text = "";
+            lockControl();
+            btnThem.Enabled = true;
+            btnReset.Enabled = true;
+            loadID();
+        }
+
+        void unlockText()
+        {
+            txtMaSP.Enabled = false;
+            txtTenSP.Enabled = true;
+            txtDonGia.Enabled = true;
+        }
+
+        void lockText()
+        {
+            txtMaSP.Enabled = false;
+            txtTenSP.Enabled = false;
+            txtDonGia.Enabled = false;
+        }
+
+
+        private void dgvDichVu_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            currentDV = (dgvDichVu.DataSource as List<DichVu>).Skip(e.RowIndex).FirstOrDefault();
+            bindToTextbox();
+            flagAction = "update";
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+            btnLuu.Show();
+            btnLuu.Enabled = true;
+            unlockText();
+            btnThem.Hide();
+        }
+
+        void bindToTextbox()
+        {
+            txtMaSP.Text = currentDV.MaDV;
+            txtTenSP.Text = currentDV.TenDV;
+            txtDonGia.Text = Convert.ToString(currentDV.DonGia);
+        }
+
+        private void dgvDichVu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            currentDV = (dgvDichVu.DataSource as List<DichVu>).Skip(e.RowIndex).FirstOrDefault();
+            bindToTextbox();
+            lockText();
+            lockControl();
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
+
+        }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
             unlockText();
@@ -116,38 +173,6 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
             loadID();
             loadDataGridView();
         }
-        void reset()
-        {
-            txtTenSP.Text = "";
-            txtDonGia.Text = "";
-            lockControl();
-            btnThem.Enabled = true;
-            btnReset.Enabled = true;
-            loadID();
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            reset();
-        }
-
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            if (currentDV != null)
-            {
-                db.DichVus.Remove(currentDV);
-                db.SaveChanges();
-                loadDataGridView();
-                loadID();
-                reset();
-                currentDV = null;
-            }
-        }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
@@ -164,51 +189,27 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
             btnThem.Hide();
         }
 
-
-        void unlockText()
+        private void btnXoa_Click(object sender, EventArgs e)
         {
-            txtMaSP.Enabled = false;
-            txtTenSP.Enabled = true;
-            txtDonGia.Enabled = true;
+            if (currentDV != null)
+            {
+                db.DichVus.Remove(currentDV);
+                db.SaveChanges();
+                loadDataGridView();
+                loadID();
+                reset();
+                currentDV = null;
+            }
         }
 
-        void lockText()
+        private void btnReset_Click(object sender, EventArgs e)
         {
-            txtMaSP.Enabled = false;
-            txtTenSP.Enabled = false;
-            txtDonGia.Enabled = false;
+            reset();
         }
 
-
-        private void dgvDichVu_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void btnThoat_Click(object sender, EventArgs e)
         {
-            currentDV = (dgvDichVu.DataSource as List<DichVu>).Skip(e.RowIndex).FirstOrDefault();
-            bindToTextbox();
-            flagAction = "update";
-            btnSua.Enabled = false;
-            btnXoa.Enabled = false;
-            btnLuu.Show();
-            btnLuu.Enabled = true;
-            unlockText();
-            btnThem.Hide();
-        }
-
-        void bindToTextbox()
-        {
-            txtMaSP.Text = currentDV.MaDV;
-            txtTenSP.Text = currentDV.TenDV;
-            txtDonGia.Text = Convert.ToString(currentDV.DonGia);
-        }
-
-        private void dgvDichVu_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            currentDV = (dgvDichVu.DataSource as List<DichVu>).Skip(e.RowIndex).FirstOrDefault();
-            bindToTextbox();
-            lockText();
-            lockControl();
-            btnSua.Enabled = true;
-            btnXoa.Enabled = true;
-
+            this.Close();
         }
     }
 }

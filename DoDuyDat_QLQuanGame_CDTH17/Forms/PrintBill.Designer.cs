@@ -45,29 +45,37 @@
             this.crv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crv.Cursor = System.Windows.Forms.Cursors.Default;
             this.crv.DisplayToolbar = false;
-            this.crv.Location = new System.Drawing.Point(2, 156);
+            this.crv.Location = new System.Drawing.Point(2, 2);
             this.crv.Name = "crv";
-            this.crv.Size = new System.Drawing.Size(1000, 469);
+            this.crv.Size = new System.Drawing.Size(1000, 659);
             this.crv.TabIndex = 0;
             this.crv.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1008, 497);
+            this.button1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.print;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(1024, 471);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 56);
             this.button1.TabIndex = 1;
             this.button1.Text = "In Hóa Đơn";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1008, 559);
+            this.button2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.uncheck;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(1024, 605);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 56);
             this.button2.TabIndex = 2;
             this.button2.Text = "Hủy";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -83,7 +91,7 @@
             this.dgvHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHD.Location = new System.Drawing.Point(1, 2);
             this.dgvHD.Name = "dgvHD";
-            this.dgvHD.Size = new System.Drawing.Size(1002, 151);
+            this.dgvHD.Size = new System.Drawing.Size(1002, 136);
             this.dgvHD.TabIndex = 10;
             // 
             // txtTongtien
@@ -117,7 +125,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1114, 627);
+            this.ClientSize = new System.Drawing.Size(1130, 666);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTongtien);
             this.Controls.Add(this.label2);
@@ -126,6 +134,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.crv);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PrintBill";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "In Hóa Đơn";

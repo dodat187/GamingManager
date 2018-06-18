@@ -1,6 +1,8 @@
 ﻿using DoDuyDat_QLQuanGame_CDTH17.Forms;
 using DoDuyDat_QLQuanGame_CDTH17.Libraries;
 using System;
+using System.Data;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace DoDuyDat_QLQuanGame_CDTH17
@@ -13,8 +15,25 @@ namespace DoDuyDat_QLQuanGame_CDTH17
         {
             InitializeComponent();
         }
+
         public static string lbus;
+        private SqlConnection con;
+        private DataTable dt = new DataTable("QuanTri");
+        private SqlDataAdapter da = new SqlDataAdapter();
         Connect cn = new Connect();
+        private void connect()
+        {
+            string cnn = "Data Source=DESKTOP-TV115F9\\SQLEXPRESS;Initial Catalog=DoDuyDat_QLQuanGame_17;Integrated Security=True";
+            try
+            {
+                con = new SqlConnection(cnn);
+                con.Open();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Không thể kết nối tới CSDL.", "Lỗi", MessageBoxButtons.OK);
+            }
+        }
 
         private bool CheckExistForm(string name)
         {
@@ -159,10 +178,22 @@ namespace DoDuyDat_QLQuanGame_CDTH17
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            connect();
+            txtID.Text += "     " + IdAccount.ID_User;
             if (IdAccount.Login == true)
             {
-                txtID.Text += "     " + IdAccount.ID_User;
+
             }
+            else
+            {
+                tsmMenuManager.Enabled = false;
+                tsmPCManager.Enabled = false;
+            }
+        }
+
+        void loadPhanQuyen()
+        {
+
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

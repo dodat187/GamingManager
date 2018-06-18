@@ -59,23 +59,29 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(182, 188);
+            this.btnThoat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.exit;
+            this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThoat.Location = new System.Drawing.Point(201, 188);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(118, 38);
+            this.btnThoat.Size = new System.Drawing.Size(99, 53);
             this.btnThoat.TabIndex = 9;
             this.btnThoat.Text = "Thoát";
+            this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnNaptien
             // 
-            this.btnNaptien.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNaptien.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNaptien.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.add;
+            this.btnNaptien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNaptien.Location = new System.Drawing.Point(12, 188);
             this.btnNaptien.Name = "btnNaptien";
-            this.btnNaptien.Size = new System.Drawing.Size(118, 38);
+            this.btnNaptien.Size = new System.Drawing.Size(103, 53);
             this.btnNaptien.TabIndex = 8;
             this.btnNaptien.Text = "Nạp";
+            this.btnNaptien.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNaptien.UseVisualStyleBackColor = true;
             this.btnNaptien.Click += new System.EventHandler(this.btnNaptien_Click);
             // 
@@ -136,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(316, 236);
+            this.ClientSize = new System.Drawing.Size(316, 253);
             this.Controls.Add(this.txtTMN);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtAMN);

@@ -31,6 +31,9 @@ namespace DoDuyDat_QLQuanGame_CDTH17
             txtMaHD.Enabled = false;
             txtMaHD.ReadOnly = true;
             loadListDV();
+            btnThoat.Enabled = false;
+            btnCreatHD.Enabled = false;
+            btUpdate.Enabled = false;
 
         }
 
@@ -64,7 +67,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
             string nextID = IdGenerate.genId(lastID, "HD");
             txtMaHD.Text = nextID;
         }
-        
+
 
         void loadListDV()
         {
@@ -112,12 +115,16 @@ namespace DoDuyDat_QLQuanGame_CDTH17
 
         private void btnThietlap_Click(object sender, EventArgs e)
         {
+
             if (ListDVCheck.Items.Count == 0)
             {
                 MessageBox.Show("Bạn chưa nhập món ăn.");
             }
             else
             {
+                btnThoat.Enabled = true;
+                button1.Enabled = false;
+                btnCreatHD.Enabled = true;
                 cn.DDL("insert into HoaDon values('" + txtMaHD.Text.ToString() + "','" + 0 + "')");
                 for (int i = 0; i < ListDVCheck.Items.Count; i++)
                 {
@@ -136,6 +143,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
 
         private void dgvCTHD_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            btUpdate.Enabled = true;
             txtCTHD.DataBindings.Clear();
             txtTenDA.DataBindings.Clear();
             txtSL.DataBindings.Clear();
@@ -157,6 +165,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
+
             cn.DDL("Delete from ChiTietHoaDon where MaHD='" + txtMaHD.Text.ToString() + "'");
             cn.DDL("Delete from HoaDon where MaHD='" + txtMaHD.Text.ToString() + "'");
             this.Close();
@@ -167,16 +176,18 @@ namespace DoDuyDat_QLQuanGame_CDTH17
 
             cn.DDL("Update HoaDon set TongTien='" + Convert.ToInt32(txtTongTien.Text.Trim()) + "' where MaHD='" + txtMaHD.Text.ToString() + "'");
             MessageBox.Show("Ðặt món thành công, vui lòng chờ trong giây lát.");
-            //this.Close();
+            this.Hide();
             PrintBill frmPrint = new PrintBill();
             delPassData del1 = new delPassData(frmPrint.funData1);
             del1(this.txtMaHD);
             frmPrint.Show();
+            this.Close();
 
         }
 
         private void dgvCTHD_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            btUpdate.Enabled = true;
             txtCTHD.DataBindings.Clear();
             txtTenDA.DataBindings.Clear();
             txtSL.DataBindings.Clear();

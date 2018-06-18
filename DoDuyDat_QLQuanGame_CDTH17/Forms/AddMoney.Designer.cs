@@ -51,22 +51,28 @@
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(211, 170);
+            this.btnThoat.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.exit;
+            this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThoat.Location = new System.Drawing.Point(249, 170);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(120, 38);
+            this.btnThoat.Size = new System.Drawing.Size(82, 57);
             this.btnThoat.TabIndex = 15;
             this.btnThoat.Text = "Thoát";
+            this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnAddMoney
             // 
             this.btnAddMoney.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddMoney.Location = new System.Drawing.Point(12, 171);
+            this.btnAddMoney.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.add;
+            this.btnAddMoney.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddMoney.Location = new System.Drawing.Point(15, 171);
             this.btnAddMoney.Name = "btnAddMoney";
-            this.btnAddMoney.Size = new System.Drawing.Size(120, 38);
+            this.btnAddMoney.Size = new System.Drawing.Size(107, 56);
             this.btnAddMoney.TabIndex = 14;
             this.btnAddMoney.Text = "Nạp Tiền";
+            this.btnAddMoney.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddMoney.UseVisualStyleBackColor = true;
             this.btnAddMoney.Click += new System.EventHandler(this.btnAddMoney_Click);
             // 
@@ -165,7 +171,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 220);
+            this.ClientSize = new System.Drawing.Size(343, 239);
             this.Controls.Add(this.txtTMN);
             this.Controls.Add(this.txtAMN);
             this.Controls.Add(this.txtPMN);

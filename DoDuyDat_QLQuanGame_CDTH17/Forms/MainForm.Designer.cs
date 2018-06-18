@@ -108,6 +108,7 @@
             // 
             // tsmAddUser
             // 
+            this.tsmAddUser.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.add;
             this.tsmAddUser.Name = "tsmAddUser";
             this.tsmAddUser.Size = new System.Drawing.Size(181, 24);
             this.tsmAddUser.Text = "Tạo Tài Khoản";
@@ -115,6 +116,7 @@
             // 
             // tsmChangePassword
             // 
+            this.tsmChangePassword.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.Login;
             this.tsmChangePassword.Name = "tsmChangePassword";
             this.tsmChangePassword.Size = new System.Drawing.Size(181, 24);
             this.tsmChangePassword.Text = "Đổi Mật Khẩu";
@@ -122,6 +124,7 @@
             // 
             // tsmAddMoney
             // 
+            this.tsmAddMoney.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.bill;
             this.tsmAddMoney.Name = "tsmAddMoney";
             this.tsmAddMoney.Size = new System.Drawing.Size(181, 24);
             this.tsmAddMoney.Text = "Nạp Tiền";
@@ -193,6 +196,7 @@
             // 
             // tsmPhanQuyen
             // 
+            this.tsmPhanQuyen.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.admin1;
             this.tsmPhanQuyen.Name = "tsmPhanQuyen";
             this.tsmPhanQuyen.Size = new System.Drawing.Size(164, 24);
             this.tsmPhanQuyen.Text = "Phân Quyền";
@@ -200,6 +204,7 @@
             // 
             // tsmLogout
             // 
+            this.tsmLogout.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.logout;
             this.tsmLogout.Name = "tsmLogout";
             this.tsmLogout.Size = new System.Drawing.Size(164, 24);
             this.tsmLogout.Text = "Đăng Xuất";
@@ -207,6 +212,7 @@
             // 
             // tsmExit
             // 
+            this.tsmExit.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.exit;
             this.tsmExit.Name = "tsmExit";
             this.tsmExit.Size = new System.Drawing.Size(164, 24);
             this.tsmExit.Text = "Thoát";

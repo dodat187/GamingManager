@@ -39,6 +39,9 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
             loadDataGridView();
             loadReport();
             funData1(txtMaHD);
+            txtMaHD.Enabled = false;
+            txtTongtien.Enabled = false;
+            dgvHD.Hide();
         }
         void loadDataGridView()
         {

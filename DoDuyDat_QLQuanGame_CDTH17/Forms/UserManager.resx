@@ -123,10 +123,43 @@
   <metadata name="nguoiDungBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>267, 17</value>
   </metadata>
+  <metadata name="ID_Password.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="nguoiDungBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>267, 17</value>
+  </metadata>
   <metadata name="doDuyDat_QLQuanGame_17DataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="doDuyDat_QLQuanGame_17DataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnTaotk.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxMAAAsTAQCanBgAAADuSURBVFhH7dbdCkFBFAXgkyhJ
+        4Qk833kSnsA7HDfyAH5KKS/i54YLpVxorCVzs5vJ7ClHaq/6dEpjrykzFMq0YQ3ngAmo4px7P6VnABzG
+        ldIWVMkp0IcDyOG0AlWsgBWwAn9ZoAuxAktQxRdoAneWYggnkMNpA6E1MQ1fgHc7d5XiCA+Qw+kOoTUx
+        Y1/gBvLD6jDzBWI/Lt9WWQFfgF8e+WYd5r4A/8nwJPAi+YRHLVb4AqE1MaUvoEkH9iCH0wJUySnQA55h
+        OZy4K1VyCvAGswJWwApYgSvI4bQDVXIKtGAEU6iEElR5FeDL77jiCdCmKEjslbCBAAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="nguoiDungTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>459, 17</value>
+  </metadata>
+  <data name="btnLuu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxMAAAsTAQCanBgAAADuSURBVFhH7dbdCkFBFAXgkyhJ
+        4Qk833kSnsA7HDfyAH5KKS/i54YLpVxorCVzs5vJ7ClHaq/6dEpjrykzFMq0YQ3ngAmo4px7P6VnABzG
+        ldIWVMkp0IcDyOG0AlWsgBWwAn9ZoAuxAktQxRdoAneWYggnkMNpA6E1MQ1fgHc7d5XiCA+Qw+kOoTUx
+        Y1/gBvLD6jDzBWI/Lt9WWQFfgF8e+WYd5r4A/8nwJPAi+YRHLVb4AqE1MaUvoEkH9iCH0wJUySnQA55h
+        OZy4K1VyCvAGswJWwApYgSvI4bQDVXIKtGAEU6iEElR5FeDL77jiCdCmKEjslbCBAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>28</value>
   </metadata>
 </root>

@@ -58,6 +58,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
             else
             {
                 cn.DDL("insert into NguoiDung(ID_User, ID_Password, ID_Money) values ('" + txtTaikhoan.Text.ToString() + "','" + txtMatkhau.Text.ToString() + "','" + txtMoney.Text.ToString() + "')");
+                cn.DDL("insert into QuanTri(ID_User, PhanQuyen) values ('" + txtTaikhoan.Text.ToString() + "','" + "Guest" + "')");
                 MessageBox.Show("Tạo tài khoản thành công.", "Thông báo");
                 this.Close();
             }

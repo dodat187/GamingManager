@@ -31,16 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaHD = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnHuy = new System.Windows.Forms.Button();
             this.ListDVCheck = new System.Windows.Forms.ListBox();
             this.ListDV = new System.Windows.Forms.ListBox();
-            this.btUnpick = new System.Windows.Forms.Button();
-            this.btPick = new System.Windows.Forms.Button();
-            this.btnCreatHD = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvCTHD = new System.Windows.Forms.DataGridView();
-            this.btnThietlap = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtMaHD2 = new System.Windows.Forms.TextBox();
@@ -52,8 +46,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btUpdate = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btUpdate = new System.Windows.Forms.Button();
+            this.btnThietlap = new System.Windows.Forms.Button();
+            this.btnCreatHD = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
+            this.btUnpick = new System.Windows.Forms.Button();
+            this.btPick = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTHD)).BeginInit();
@@ -93,25 +93,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thực Đơn";
             // 
-            // btnHuy
-            // 
-            this.btnHuy.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(295, 503);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(135, 47);
-            this.btnHuy.TabIndex = 9;
-            this.btnHuy.Text = "Hủy Chọn Tất Cả";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
             // ListDVCheck
             // 
             this.ListDVCheck.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListDVCheck.FormattingEnabled = true;
             this.ListDVCheck.ItemHeight = 16;
-            this.ListDVCheck.Location = new System.Drawing.Point(235, 66);
+            this.ListDVCheck.Location = new System.Drawing.Point(196, 66);
             this.ListDVCheck.Name = "ListDVCheck";
-            this.ListDVCheck.Size = new System.Drawing.Size(195, 420);
+            this.ListDVCheck.Size = new System.Drawing.Size(234, 420);
             this.ListDVCheck.TabIndex = 8;
             // 
             // ListDV
@@ -121,59 +110,15 @@
             this.ListDV.ItemHeight = 16;
             this.ListDV.Location = new System.Drawing.Point(20, 66);
             this.ListDV.Name = "ListDV";
-            this.ListDV.Size = new System.Drawing.Size(190, 420);
+            this.ListDV.Size = new System.Drawing.Size(147, 420);
             this.ListDV.TabIndex = 6;
-            // 
-            // btUnpick
-            // 
-            this.btUnpick.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btUnpick.Location = new System.Drawing.Point(115, 503);
-            this.btUnpick.Name = "btUnpick";
-            this.btUnpick.Size = new System.Drawing.Size(95, 47);
-            this.btUnpick.TabIndex = 7;
-            this.btUnpick.Text = "Bỏ Chọn";
-            this.btUnpick.UseVisualStyleBackColor = true;
-            this.btUnpick.Click += new System.EventHandler(this.btUnpick_Click);
-            // 
-            // btPick
-            // 
-            this.btPick.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btPick.Location = new System.Drawing.Point(20, 503);
-            this.btPick.Name = "btPick";
-            this.btPick.Size = new System.Drawing.Size(89, 47);
-            this.btPick.TabIndex = 6;
-            this.btPick.Text = "Chọn";
-            this.btPick.UseVisualStyleBackColor = true;
-            this.btPick.Click += new System.EventHandler(this.btPick_Click);
-            // 
-            // btnCreatHD
-            // 
-            this.btnCreatHD.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreatHD.Location = new System.Drawing.Point(857, 531);
-            this.btnCreatHD.Name = "btnCreatHD";
-            this.btnCreatHD.Size = new System.Drawing.Size(108, 47);
-            this.btnCreatHD.TabIndex = 9;
-            this.btnCreatHD.Text = "Hoàn Tất";
-            this.btnCreatHD.UseVisualStyleBackColor = true;
-            this.btnCreatHD.Click += new System.EventHandler(this.btnCreatHD_Click);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(725, 531);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(108, 47);
-            this.btnThoat.TabIndex = 8;
-            this.btnThoat.Text = "Hủy Thiết Lập";
-            this.btnThoat.UseVisualStyleBackColor = true;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvCTHD);
             this.groupBox2.Location = new System.Drawing.Point(466, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(661, 333);
+            this.groupBox2.Size = new System.Drawing.Size(661, 384);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Hóa Đơn";
@@ -183,21 +128,10 @@
             this.dgvCTHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCTHD.Location = new System.Drawing.Point(6, 19);
             this.dgvCTHD.Name = "dgvCTHD";
-            this.dgvCTHD.Size = new System.Drawing.Size(649, 308);
+            this.dgvCTHD.Size = new System.Drawing.Size(649, 365);
             this.dgvCTHD.TabIndex = 0;
             this.dgvCTHD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTHD_CellContentClick);
             this.dgvCTHD.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTHD_CellDoubleClick);
-            // 
-            // btnThietlap
-            // 
-            this.btnThietlap.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThietlap.Location = new System.Drawing.Point(466, 515);
-            this.btnThietlap.Name = "btnThietlap";
-            this.btnThietlap.Size = new System.Drawing.Size(120, 47);
-            this.btnThietlap.TabIndex = 12;
-            this.btnThietlap.Text = "Tạo và thiết lập";
-            this.btnThietlap.UseVisualStyleBackColor = true;
-            this.btnThietlap.Click += new System.EventHandler(this.btnThietlap_Click);
             // 
             // groupBox3
             // 
@@ -212,7 +146,7 @@
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.btUpdate);
-            this.groupBox3.Location = new System.Drawing.Point(469, 341);
+            this.groupBox3.Location = new System.Drawing.Point(469, 402);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(652, 172);
             this.groupBox3.TabIndex = 13;
@@ -303,33 +237,123 @@
             this.label6.TabIndex = 19;
             this.label6.Text = "Mã Hóa Đơn:";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.exit;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(1028, 594);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 60);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Thoát";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btUpdate
             // 
-            this.btUpdate.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btUpdate.Location = new System.Drawing.Point(315, 111);
+            this.btUpdate.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btUpdate.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.update;
+            this.btUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btUpdate.Location = new System.Drawing.Point(315, 94);
             this.btUpdate.Name = "btUpdate";
-            this.btUpdate.Size = new System.Drawing.Size(103, 42);
+            this.btUpdate.Size = new System.Drawing.Size(111, 59);
             this.btUpdate.TabIndex = 16;
             this.btUpdate.Text = "Cập Nhật";
+            this.btUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btUpdate.UseVisualStyleBackColor = true;
             this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
             // 
-            // button1
+            // btnThietlap
             // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1010, 531);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 47);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Thoát";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnThietlap.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThietlap.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.add;
+            this.btnThietlap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThietlap.Location = new System.Drawing.Point(340, 594);
+            this.btnThietlap.Name = "btnThietlap";
+            this.btnThietlap.Size = new System.Drawing.Size(99, 60);
+            this.btnThietlap.TabIndex = 12;
+            this.btnThietlap.Text = "Tạo và thiết lập";
+            this.btnThietlap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThietlap.UseVisualStyleBackColor = true;
+            this.btnThietlap.Click += new System.EventHandler(this.btnThietlap_Click);
+            // 
+            // btnCreatHD
+            // 
+            this.btnCreatHD.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreatHD.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.createbill;
+            this.btnCreatHD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCreatHD.Location = new System.Drawing.Point(855, 594);
+            this.btnCreatHD.Name = "btnCreatHD";
+            this.btnCreatHD.Size = new System.Drawing.Size(110, 60);
+            this.btnCreatHD.TabIndex = 9;
+            this.btnCreatHD.Text = "Hoàn Tất";
+            this.btnCreatHD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCreatHD.UseVisualStyleBackColor = true;
+            this.btnCreatHD.Click += new System.EventHandler(this.btnCreatHD_Click);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.cancel;
+            this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThoat.Location = new System.Drawing.Point(746, 594);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(87, 60);
+            this.btnThoat.TabIndex = 8;
+            this.btnThoat.Text = "Hủy";
+            this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.uncheckall;
+            this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHuy.Location = new System.Drawing.Point(331, 503);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(99, 47);
+            this.btnHuy.TabIndex = 9;
+            this.btnHuy.Text = "Hủy Tất";
+            this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // btUnpick
+            // 
+            this.btUnpick.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btUnpick.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.uncheck;
+            this.btUnpick.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btUnpick.Location = new System.Drawing.Point(196, 503);
+            this.btUnpick.Name = "btUnpick";
+            this.btUnpick.Size = new System.Drawing.Size(107, 47);
+            this.btUnpick.TabIndex = 7;
+            this.btUnpick.Text = "Bỏ Chọn";
+            this.btUnpick.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btUnpick.UseVisualStyleBackColor = true;
+            this.btUnpick.Click += new System.EventHandler(this.btUnpick_Click);
+            // 
+            // btPick
+            // 
+            this.btPick.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPick.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.check;
+            this.btPick.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btPick.Location = new System.Drawing.Point(20, 503);
+            this.btPick.Name = "btPick";
+            this.btPick.Size = new System.Drawing.Size(89, 47);
+            this.btPick.TabIndex = 6;
+            this.btPick.Text = "Chọn";
+            this.btPick.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btPick.UseVisualStyleBackColor = true;
+            this.btPick.Click += new System.EventHandler(this.btPick_Click);
             // 
             // CreatBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1130, 590);
+            this.ClientSize = new System.Drawing.Size(1130, 666);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnThietlap);
