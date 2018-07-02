@@ -243,7 +243,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "IT GAMING - 252 Nguyễn Trãi - Thanh Xuân - Hà Nội";
+            this.Text = "Giao Diện Quản Lý - IT GAMING - 252 Nguyễn Trãi - Thanh Xuân - Hà Nội";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

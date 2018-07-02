@@ -51,6 +51,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
             btnEnd.Enabled = false;
             btnTinhtien.Enabled = false;
             txtHidden.Hide();
+            connect();
         }
 
         private void loadDataGridView()
@@ -94,15 +95,38 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
             txtEnd.Text = "";
         }
 
+
         private void btnStart_Click(object sender, EventArgs e)
         {
-            txtStart.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            txtEnd.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            cn.DDL("insert into ChiTietSuDung(MaCTSD, ID_PC, ID_User, Stime, Etime) values ('" + txtMaCTSD.Text.ToString() + "','" + cbbPC.Text.ToString() + "','" + cbbUser.Text.ToString() + "','" + txtStart.Text.ToString() + "','" + txtEnd.Text.ToString() + "')");
-            MessageBox.Show("Đã khởi động máy", "Thông Báo");
-            resetTime();
-            loadID();
-            loadDataGridView();
+            SqlCommand command = new SqlCommand();
+            command.Connection = con;
+            command.CommandType = CommandType.Text;
+            command.CommandText = @"Select * From ChiTietSuDung Where (ID_User = @iduser) or (ID_PC = @idpc)";
+            command.Parameters.Add("@iduser", SqlDbType.NVarChar, 20).Value = cbbUser.Text;
+            command.Parameters.Add("@idpc", SqlDbType.NVarChar, 20).Value = cbbPC.Text;
+            da.SelectCommand = command;
+            da.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                MessageBox.Show("Tài khoản hoặc máy đang có người sử dụng. Không thể khởi động", "Thông Báo");
+            }
+            else
+            {
+                txtStart.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                txtEnd.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                cn.DDL("insert into ChiTietSuDung(MaCTSD, ID_PC, ID_User, Stime, Etime) values ('" + txtMaCTSD.Text.ToString() + "','" + cbbPC.Text.ToString() + "','" + cbbUser.Text.ToString() + "','" + txtStart.Text.ToString() + "','" + txtEnd.Text.ToString() + "')");
+                MessageBox.Show("Đã khởi động máy", "Thông Báo");
+                resetTime();
+                loadID();
+                loadDataGridView();
+            }
+            //txtStart.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            //txtEnd.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            //cn.DDL("insert into ChiTietSuDung(MaCTSD, ID_PC, ID_User, Stime, Etime) values ('" + txtMaCTSD.Text.ToString() + "','" + cbbPC.Text.ToString() + "','" + cbbUser.Text.ToString() + "','" + txtStart.Text.ToString() + "','" + txtEnd.Text.ToString() + "')");
+            //MessageBox.Show("Đã khởi động máy", "Thông Báo");
+            //resetTime();
+            //loadID();
+            //loadDataGridView();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -139,7 +163,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
             TimeSpan duration = DateTime.Parse(et).Subtract(DateTime.Parse(st));
             txtTime.Text = duration.ToString();
             txtHidden.Text = duration.TotalSeconds.ToString();
-            txtTien.Text = (Convert.ToInt32(txtHidden.Text) * 50 / 60).ToString();
+            txtTien.Text = ((Convert.ToInt32(txtHidden.Text) * 100 / 60) / 1000).ToString();
             btnEnd.Enabled = false;
             btnTinhtien.Enabled = true;
         }
@@ -160,11 +184,11 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
             strBuilder.AppendLine();
             strBuilder.AppendLine(new string('-', 30));
             strBuilder.Append("Thành Tiền: " + txtTien.Text.ToString() + "");
-            int tien = int.Parse(txtTien.Text);
+            //int tien = int.Parse(txtTien.Text);
 
             MessageBox.Show(strBuilder.ToString(), "Hóa Đơn");
             cn.DDL("delete from ChiTietSuDung where ID_PC='" + cbbPC.Text.ToString() + "'");
-            cn.DDL("update NguoiDung set ID_Money = ID_Money - '" + tien + "'  where ID_User='" + cbbUser.Text.ToString() + "'");
+            cn.DDL("update NguoiDung set ID_Money = ID_Money - '" + txtTien.Text.ToString() + "'  where ID_User='" + cbbUser.Text.ToString() + "'");
             cbbPC.ResetText();
             cbbUser.ResetText();
             txtStart.ResetText();
@@ -175,6 +199,24 @@ namespace DoDuyDat_QLQuanGame_CDTH17.Forms
             btnEnd.Enabled = false;
             btnTinhtien.Enabled = false;
             loadDataGridView();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            cbbPC.ResetText();
+            cbbUser.ResetText();
+            txtStart.ResetText();
+            txtEnd.ResetText();
+            txtTien.ResetText();
+            txtTime.ResetText();
+            resetTime();
+            btnStart.Enabled = true;
+            btnEnd.Enabled = false;
+            btnTinhtien.Enabled = false;
+            loadcbbPC();
+            loadcbbUser();
+            loadDataGridView();
+            loadID();
         }
     }
 }

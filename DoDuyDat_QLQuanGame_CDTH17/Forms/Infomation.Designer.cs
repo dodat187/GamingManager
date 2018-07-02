@@ -271,7 +271,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DoDuyDat_QLQuanGame_CDTH17.Properties.Resources.Logo1;
-            this.pictureBox1.Location = new System.Drawing.Point(857, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(838, 31);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(218, 218);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;

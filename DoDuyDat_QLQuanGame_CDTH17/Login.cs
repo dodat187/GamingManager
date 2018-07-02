@@ -45,7 +45,7 @@ namespace DoDuyDat_QLQuanGame_CDTH17
             connect();
             this.AcceptButton = btnLogin;
             txtUser.Text = "Nhập Tài Khoản";
-            txtPassword.Text = "******";
+            txtPassword.Text = "Nhập Mật Khẩu";
             txtPhanQuyen.Text = "Phân quyền";
         }
 
@@ -184,5 +184,6 @@ namespace DoDuyDat_QLQuanGame_CDTH17
         {
             txtPassword.Text = "";
         }
+        
     }
 }
